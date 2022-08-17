@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    /* margin-bottom: 100px; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* .content {
+    flex: 1 0 auto;
+  } */
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: #103948;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-navy {
+    background: #103948;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-navy:hover,
+.btn-navy:active,
+.btn-navy:focus {
+    background: #103948BF;
+    color: white;
+}
+
+.text-navy {
+    color: #103948 !important;
+}
+
+.border-navy {
+    border: 1px solid #103948 !important;
+}
+
+/* -------------------------------- Navbar Styling */
+
+#navbar1 {
+    background-color: white;
+    color: black;
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
