@@ -23,6 +23,15 @@ body {
     width: 1.5rem;
 }
 
+.main-logo-font {
+    /* text-transform: uppercase; */
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -56,11 +65,15 @@ body {
     border: 1px solid #103948 !important;
 }
 
+#delivery-banner {
+    background-color: #ebebeb;
+}
+
 /* -------------------------------- Navbar Styling */
 
 #navbar1 {
     background-color: white;
-    color: black;
+    color: #103948;
     position: fixed; /* Make it stick/fixed */
     top: 0; /* Stay on top */
     width: 100%; /* Full width */
@@ -74,5 +87,20 @@ body {
   .container {
     max-width: 80%;
   }
+  .header-container {
+    padding-top: 164px;
+  }
 }
+
+/* fixed top navbar only on medium and up ... try to change this with the fixed and rolling menu */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+
 
