@@ -74,22 +74,27 @@ body {
 #navbar1 {
     background-color: white;
     color: #103948;
-    position: fixed; /* Make it stick/fixed */
-    top: 0; /* Stay on top */
-    width: 100%; /* Full width */
-    transition: top 0.5s; /* Transition effect when sliding down (and up) */
-  }
+    position: fixed;
+    /* Make it stick/fixed */
+    top: 0;
+    /* Stay on top */
+    width: 100%;
+    /* Full width */
+    transition: top 0.5s;
+    /* Transition effect when sliding down (and up) */
+}
 
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-  .header-container {
-    padding-top: 164px;
-  }
+    .container {
+        max-width: 80%;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
 }
 
 /* fixed top navbar only on medium and up ... try to change this with the fixed and rolling menu */
@@ -101,6 +106,27 @@ body {
         left: 0;
         z-index: 1030;
     }
-
-
-
+    .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+        color: #103948BF;
+    }
+    
+    .hover-underline-animation:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #103948BF;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    
+    .hover-underline-animation:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
