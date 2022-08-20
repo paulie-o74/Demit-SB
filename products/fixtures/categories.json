@@ -1,0 +1,82 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "small_print",
+            "friendly_name": "Print (Small)"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "print_medium",
+            "friendly_name": "Print (Medium)"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "print_large",
+            "friendly_name": "Print (Large)"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "print_xl",
+            "friendly_name": "Print (XL)"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "original_small",
+            "friendly_name": "Original (Small)"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "original_medium",
+            "friendly_name": "Original (Medium)"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "original_large",
+            "friendly_name": "Original (Large)"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "original_xl",
+            "friendly_name": "Original (XL)"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "gift_card",
+            "friendly_name": "Gift Cards"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+            "name": "misc",
+            "friendly_name": "Miscellaneous"
+        }
+    }
+]

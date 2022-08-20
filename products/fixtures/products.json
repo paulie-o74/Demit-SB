@@ -1,0 +1,582 @@
+[
+   {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5001340155",
+         "name": "Stick 'em up",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 50.00,
+         "category": 1,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW1.jpg"
+      }
+   },
+   {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5001600425",
+         "name": "Eu de toilette",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 50.00,
+         "category": 1,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW.jpg"
+      }
+   },
+   {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5001730010",
+         "name": "Money",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 50.00,
+         "category": 1,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW3.jpg"
+      }
+   },
+   {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5001890157",
+         "name": "Money Money Money",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 50.00,
+         "category": 1,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW4.jpg"
+      }
+   },
+   {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002111605",
+         "name": "Spring",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": "50.00",
+         "category": 1,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW5.jpg"
+      }
+   },
+   {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002260206",
+         "name": "Primavera",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": "60.00",
+         "category": 2,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW6.jpg"
+      }
+   },
+   {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002440521",
+         "name": "Swamp",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 60.00,
+         "category": 2,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW7.jpb"
+      }
+   },
+   {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002601115",
+         "name": "Playboy",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 60.00,
+         "category": 2,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW8.jpg"
+      }
+   },
+   {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002690715",
+         "name": "Politics",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 60.00,
+         "category": 2,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW9.jpg"
+      }
+   },
+   {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002701115",
+         "name": "America",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 60.00,
+         "category": 2,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW10.jpg"
+      }
+   },
+   {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002761055",
+         "name": "Rising Sun",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 80.00,
+         "category": 3,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW11.jpg"
+      }
+   },
+   {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002820069",
+         "name": "Soviet",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 80.00,
+         "category": 3,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW12.jpg"
+      }
+   },
+   {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002820147",
+         "name": "Investigation",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 80.00,
+         "category": 3,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW13.jpg"
+      }
+   },
+   {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002910572",
+         "name": "Elusive",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 80.00,
+         "category": 3,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW14.jpg"
+      }
+   },
+   {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5002990740",
+         "name": "Showtime",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 80.00,
+         "category": 3,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW15.jpg"
+      }
+   },
+   {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003050248",
+         "name": "Botanics",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 121cm x 150cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 100.00,
+         "category": 4,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW16.jpg"
+      }
+   },
+   {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003070787",
+         "name": "His & Hers",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 100.00,
+         "category": 4,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW17.jpg"
+      }
+   },
+   {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003090182",
+         "name": "Pucker up",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 100.00,
+         "category": 4,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW18.jpg"
+      }
+   },
+   {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003090186",
+         "name": "Feeling blue",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 100.00,
+         "category": 4,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW19.jpg"
+      }
+   },
+   {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003161326",
+         "name": "Anarchy",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Print on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 200.00,
+         "category": 4,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW20.jpg"
+      }
+   },
+   {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003230723",
+         "name": "Winehouse",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 200.00,
+         "category": 5,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW21.jpg"
+      }
+   },
+   {
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003270936",
+         "name": "I stay the same age",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 200.00,
+         "category": 5,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW22.jpg"
+      }
+   },
+   {
+      "pk": 23,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003360384",
+         "name": "Peaky",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 200.00,
+         "category": 5,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW23.jpg"
+      }
+   },
+   {
+      "pk": 24,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003440111",
+         "name": "The cost of war",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 200.00,
+         "category": 5,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW24.jpg"
+      }
+   },
+   {
+      "pk": 25,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003540313",
+         "name": "Flipante",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 10.16cm x 20.32cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 200.00,
+         "category": 5,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW25.jpg"
+      }
+   },
+   {
+      "pk": 26,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003560513",
+         "name": "Supply chains",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 300.00,
+         "category": 6,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW26.jpg"
+      }
+   },
+   {
+      "pk": 27,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003560948",
+         "name": "Santorini",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 300.00,
+         "category": 6,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW27.jpg"
+      }
+   },
+   {
+      "pk": 28,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003570628",
+         "name": "Grandpa",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 300.00,
+         "category": 6,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW28.jpg"
+      }
+   },
+   {
+      "pk": 29,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003620308",
+         "name": "Innocence is no more",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 300.00,
+         "category": 6,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW29.jpg"
+      }
+   },
+   {
+      "pk": 30,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003690115",
+         "name": "Playboy #221",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 30.48cm x 40.64cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 300.00,
+         "category": 6,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW30.jpg"
+      }
+   },
+   {
+      "pk": 31,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003690116",
+         "name": "Plan Tranqui",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 500.00,
+         "category": 7,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW31.jpg"
+      }
+   },
+   {
+      "pk": 32,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003780391",
+         "name": "Hip Hop rules everything",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 500.00,
+         "category": 7,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW32.jpg"
+      }
+   },
+   {
+      "pk": 33,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003790542",
+         "name": "Innocence",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 500.00,
+         "category": 7,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW33.jpg"
+      }
+   },
+   {
+      "pk": 34,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003831225",
+         "name": "Land shrimp",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 500.00,
+         "category": 7,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW34.jpg"
+      }
+   },
+   {
+      "pk": 35,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003861402",
+         "name": "Out Out",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 91.44cm x 121.92cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 500.00,
+         "category": 7,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW35.jpg"
+      }
+   },
+   {
+      "pk": 36,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003910638",
+         "name": "Wedding attire",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 121cm x 150cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 800.00,
+         "category": 8,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW36.jpg"
+      }
+   },
+   {
+      "pk": 37,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003950574",
+         "name": "Attraction",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 121cm x 150cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 800.00,
+         "category": 8,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW37.jpg"
+      }
+   },
+   {
+      "pk": 38,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003950576",
+         "name": "Siberia",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 121cm x 150cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 800.00,
+         "category": 8,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW38.jpg"
+      }
+   },
+   {
+      "pk": 39,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003960062",
+         "name": "Fleur",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 121cm x 150cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 800.00,
+         "category": 8,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW39.jpg"
+      }
+   },
+   {
+      "pk": 40,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003960682",
+         "name": "Vinyl",
+         "description": "This is a demonstration store. The works here are of Andy Warhol. Andy Warhol was an American visual artist, film director, and producer who was a leading figure in the visual art movement known as pop art. \n\n- Size 121cm x 150cm\n- Original on canvas\n- Edges are finished and framing is not required for this piece \n- Artwork is signed by the artist ",
+         "price": 800.00,
+         "category": 8,
+         "image_url": "https://www.kaggle.com/code/paultimothymooney/collections-of-paintings-from-50-artists",
+         "image": "AW40.jpg"
+      }
+   },
+   {
+      "pk": 41,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003960775",
+         "name": "€50 Gift card",
+         "description": "This is a demonstration store. The gift voucher show here is for the store of fictional artist Demit with example works from Andy Warhol.\n\n- Value €50\n- Redeemable online at checkout via introducing the 8 digit code attached",
+         "price": 50.00,
+         "category": 9,
+         "image": "gift_voucher_50.png"
+      }
+   },
+   {
+      "pk": 42,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003990736",
+         "name": "€100 Gift card",
+         "description": "This is a demonstration store. The gift voucher show here is for the store of fictional artist Demit with example works from Andy Warhol.\n\n- Value €100\n- Redeemable online at checkout via introducing the 8 digit code attached",
+         "price": 100.00,
+         "category": 9,
+         "image": "gift_voucher_50.png"
+      }
+   },
+   {
+      "pk": 43,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5003990746",
+         "name": "€200 Gift card",
+         "description": "This is a demonstration store. The gift voucher show here is for the store of fictional artist Demit with example works from Andy Warhol.\n\n- Value €200\n- Redeemable online at checkout via introducing the 8 digit code attached",
+         "price": 200.00,
+         "category": 9,
+         "image": "gift_voucher_50.png"
+      }
+   },
+   {
+      "pk": 44,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5004111503",
+         "name": "€300 Gift card",
+         "description": "This is a demonstration store. The gift voucher show here is for the store of fictional artist Demit with example works from Andy Warhol.\n\n- Value €300\n- Redeemable online at checkout via introducing the 8 digit code attached",
+         "price": 300.00,
+         "category": 9,
+         "image": "gift_voucher_50.png"
+      }
+   },
+   {
+      "pk": 45,
+      "model": "products.product",
+      "fields": {
+         "sku": "pp5004230059",
+         "name": "€500 Gift card",
+         "description": "This is a demonstration store. The gift voucher show here is for the store of fictional artist Demit with example works from Andy Warhol.\n\n- Value €500\n- Redeemable online at checkout via introducing the 8 digit code attached",
+         "price": 500.00,
+         "category": 9,
+         "image": "gift_voucher_50.png"
+      }
+   }
+]
