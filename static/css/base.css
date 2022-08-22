@@ -23,6 +23,10 @@ body {
     width: 1.5rem;
 }
 
+.overlay {
+    z-index: -1;
+}
+
 .main-logo-font {
     /* text-transform: uppercase; */
     font-family: 'Gloria Hallelujah', cursive;
@@ -68,6 +72,20 @@ body {
 #delivery-banner {
     background-color: #ebebeb;
 }
+
+.card-img {
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+    border-radius: 0;
+    border: 0;
+  }
+.card-img:hover {
+    transform: scale(1.1);
+  }
+
+.p-3 {
+    padding: $spacer !important;
+  }
 
 /* -------------------------------- Navbar Styling */
 
