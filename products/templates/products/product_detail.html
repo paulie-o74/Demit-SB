@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+            <div class="image-container my-5">
+                {% if product.image %}
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid card-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
+            <div class="product-details-container mb-5 mt-md-5">
+                <h3 class="mb-0 font-weight-bold main-logo-font text-navy">{{ product.name }}</h3>
+                <br>
+                <p class="lead mb-0 text-navy">€{{ product.price }}</p>
+                <p class="mt-3 text-navy">{{ product.description|linebreaks }}</p>
+            </div>
+            <div class="input-group w-100 w-md-75 mx-auto">
+                <!-- Submit button -->
+                <button type="" class="btn-navy form-control rounded-pill border border-navy">
+                    Add to shopping bag
+                </button>
+            </div>
+            <div class="product-details-container mb-5 mt-md-5">
+                <p class="mt-3 text-navy font-weight-bold"><small>Shipping & Returns</small></p>
+                <p class="text-navy"><small>
+                    Shipping rates are calculated by the size of the package and shipped via DHL within 10 business days.
+                    <br>
+                    All artworks can be returned in their original packaging and original condition within 14 days of receipt if it is not to your liking.
+                </small></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

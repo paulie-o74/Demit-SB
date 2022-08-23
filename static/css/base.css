@@ -71,6 +71,7 @@ body {
     width: fit-content;
 }
 
+
 /* -------------------------------- Button Styling */
 
 .btn-navy {
@@ -128,6 +129,13 @@ body {
     /* Transition effect when sliding down (and up) */
 }
 
+.shipping_returns {
+    background-color: #ebebeb;
+    color: #103948;
+    padding: 10px;
+    margin: 10px;
+}
+
 /* -------------------------------- Footer styling */
 
 footer {
@@ -173,5 +181,12 @@ footer {
     .hover-underline-animation:hover:after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
     }
 }
