@@ -1,6 +1,12 @@
+/* -------------------------------- Full app styling */
+
 /* html {
     height: 100%;
 } */
+
+a:link {
+    text-decoration: none;
+  }
 
 body {
     height: 100%;
@@ -8,65 +14,6 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
-}
-
-/* .content {
-    flex: 1 0 auto;
-  } */
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-/* .overlay {
-    z-index: -1;
-} */
-
-.main-logo-font {
-    /* text-transform: uppercase; */
-    font-family: 'Gloria Hallelujah', cursive;
-}
-
-.logo-font {
-    text-transform: uppercase;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-/* .shop-now-button {
-    background: #103948;
-    color: white;
-    min-width: 260px;
-} */
-
-.btn-navy {
-    background: #103948;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-navy:hover,
-.btn-navy:active,
-.btn-navy:focus,
-.btn:hover,
-.btn:active,
-.btn:focus {
-    transform: scale(1.05);
-}
-
-.btn {
-    color: #103948;
-    border: 1px solid #103948;
-    border-radius: 50%;
 }
 
 .text-navy {
@@ -86,14 +33,67 @@ body {
     box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
     border-radius: 0;
     border: 0;
-  }
+}
+
 .card-img:hover {
     transform: scale(1.1);
-  }
+}
 
 .p-3 {
     padding: $spacer !important;
 }
+
+/* .overlay {
+    z-index: -1;
+} */
+
+
+/* -------------------------------- from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* -------------------------------- Logo Styling */
+
+.main-logo-font {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+/* -------------------------------- Button Styling */
+
+.btn-navy {
+    background: #103948;
+    color: white;
+}
+
+
+.btn-navy:hover,
+.btn-navy:active,
+.btn-navy:focus,
+.btn:hover,
+.btn:active,
+.btn:focus {
+    transform: scale(1.05);
+}
+
+.btn {
+    color: #103948;
+    border: 1px solid #103948;
+    border-radius: 50%;
+}
+
 
 /* -------------------------------- Social Styling */
 
@@ -104,14 +104,6 @@ body {
 
 .fa-facebook {
     color: #3b5998
-}
-
-.fa-youtube {
-    color: #bb0000
-}
-
-.fa-google {
-    color: #dd4b39
 }
 
 .fa-instagram {
@@ -136,7 +128,7 @@ body {
     /* Transition effect when sliding down (and up) */
 }
 
-/* -------------------------------- Footer */
+/* -------------------------------- Footer styling */
 
 footer {
     background-color: #ebebeb;
@@ -164,7 +156,7 @@ footer {
         position: relative;
         color: #103948BF;
     }
-    
+
     .hover-underline-animation:after {
         content: '';
         position: absolute;
@@ -177,7 +169,7 @@ footer {
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
     }
-    
+
     .hover-underline-animation:hover:after {
         transform: scaleX(1);
         transform-origin: bottom left;
