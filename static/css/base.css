@@ -79,6 +79,10 @@ body {
     color: white;
 }
 
+.btn-white-bg {
+    background-color: white;
+}
+
 
 .btn-navy:hover,
 .btn-navy:active,
@@ -181,6 +185,9 @@ footer {
     .hover-underline-animation:hover:after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+    .header-container {
+        padding-top: 164px;
     }
 }
 

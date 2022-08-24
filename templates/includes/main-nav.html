@@ -15,7 +15,7 @@
             <a class="nav-link text-navy mr-5 hover-underline-animation font-weight-light" href="#" id="commissions-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Commissions
             </a>
-            <div class="dropdown-menu shadow-lg border-0" aria-labelledby="commissions-link">
+            <div class="dropdown-menu shadow-lg border-0" aria-labelledby="commissions-dd">
                 <a href="" class="dropdown-item font-weight-light text-navy">Paintings</a>
                 <a href="" class="dropdown-item font-weight-light text-navy">Murals</a>
             </div>
@@ -34,9 +34,9 @@
             <a class="nav-link text-navy mr-5 hover-underline-animation font-weight-light" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop
             </a>
-            <div class="dropdown-menu shadow-lg border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item font-weight-light text-navy">By Price</a>
-                <a href="" class="dropdown-item font-weight-light text-navy">By Category</a>
+            <div class="dropdown-menu shadow-lg border-0" aria-labelledby="all-products-dd">
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item font-weight-light text-navy">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item font-weight-light text-navy">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item font-weight-light text-navy">All Products</a>
             </div>
         </li>

@@ -20,7 +20,46 @@
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
+                
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+
+                        <div class="dropdown my-3">
+                            <button class="text-navy dropdown-toggle btn-white-bg border-0 font-weight-light" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Sort {{ products|length }} items by...
+                            </button>
+                            <div class="dropdown-menu shadow-lg border-0 font-weight-light" aria-labelledby="dropdownsortingmenu">
+                                <button href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item font-weight-light text-navy" >Price (low to high)</button>
+                                <button href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item font-weight-light text-navy">Price (high to low)</button>
+                                <button href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item font-weight-light text-navy">Name (A-Z)</button>
+                                <button href="{% url 'products' %}?sort=name&direction=desc" class="dropdown-item font-weight-light text-navy">Name (Z-A)</button>
+                                <button href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item font-weight-light text-navy">Category (A-Z)</button>
+                                <button href="{% url 'products' %}?sort=category&direction=desc" class="dropdown-item font-weight-light text-navy">Category (Z-A)</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 my-auto justify-content-md-start d-flex justify-content-center">
+                        <div class="dropdown my-3 ">
+                            <button class="text-navy dropdown-toggle btn-white-bg border-0 font-weight-light" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Categories
+                            </button>
+                            <div class="dropdown-menu shadow-lg border-0 font-weight-light" aria-labelledby="dropdowncategoriesmenu">
+                                <button class="dropdown-item font-weight-light text-navy" >Original (XL)</button>
+                                <button class="dropdown-item font-weight-light text-navy">Original (Large)</button>
+                                <button class="dropdown-item font-weight-light text-navy">Original (Medium)</button>
+                                <button class="dropdown-item font-weight-light text-navy">Original (Small)</button>
+                                <button class="dropdown-item font-weight-light text-navy">Print (XL)</button>
+                                <button class="dropdown-item font-weight-light text-navy">Print (Large)</button>
+                                <button class="dropdown-item font-weight-light text-navy">Print (Medium)</button>
+                                <button class="dropdown-item font-weight-light text-navy">Print (Small)</button>
+                                <button class="dropdown-item font-weight-light text-navy">Miscellaneous</button>
+                                <button class="dropdown-item font-weight-light text-navy">Gift Cards</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
