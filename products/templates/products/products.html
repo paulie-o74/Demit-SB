@@ -29,12 +29,10 @@
                               Sort {{ products|length }} items by...
                             </button>
                             <div class="dropdown-menu shadow-lg border-0 font-weight-light" aria-labelledby="dropdownsortingmenu">
-                                <button href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item font-weight-light text-navy" >Price (low to high)</button>
-                                <button href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item font-weight-light text-navy">Price (high to low)</button>
-                                <button href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item font-weight-light text-navy">Name (A-Z)</button>
-                                <button href="{% url 'products' %}?sort=name&direction=desc" class="dropdown-item font-weight-light text-navy">Name (Z-A)</button>
-                                <button href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item font-weight-light text-navy">Category (A-Z)</button>
-                                <button href="{% url 'products' %}?sort=category&direction=desc" class="dropdown-item font-weight-light text-navy">Category (Z-A)</button>
+                                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item font-weight-light text-navy" >Price (low to high)</a>
+                                <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item font-weight-light text-navy">Price (high to low)</a>
+                                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item font-weight-light text-navy">Name (A-Z)</a>
+                                <a href="{% url 'products' %}?sort=name&direction=desc" class="dropdown-item font-weight-light text-navy">Name (Z-A)</a>
                             </div>
                         </div>
                     </div>
@@ -45,16 +43,16 @@
                               Categories
                             </button>
                             <div class="dropdown-menu shadow-lg border-0 font-weight-light" aria-labelledby="dropdowncategoriesmenu">
-                                <button class="dropdown-item font-weight-light text-navy" >Original (XL)</button>
-                                <button class="dropdown-item font-weight-light text-navy">Original (Large)</button>
-                                <button class="dropdown-item font-weight-light text-navy">Original (Medium)</button>
-                                <button class="dropdown-item font-weight-light text-navy">Original (Small)</button>
-                                <button class="dropdown-item font-weight-light text-navy">Print (XL)</button>
-                                <button class="dropdown-item font-weight-light text-navy">Print (Large)</button>
-                                <button class="dropdown-item font-weight-light text-navy">Print (Medium)</button>
-                                <button class="dropdown-item font-weight-light text-navy">Print (Small)</button>
-                                <button class="dropdown-item font-weight-light text-navy">Miscellaneous</button>
-                                <button class="dropdown-item font-weight-light text-navy">Gift Cards</button>
+                                <a href="{% url 'products' %}?category=original_xl" class="dropdown-item font-weight-light text-navy" >Original (XL)</a>
+                                <a href="{% url 'products' %}?category=original_large" class="dropdown-item font-weight-light text-navy">Original (Large)</a>
+                                <a href="{% url 'products' %}?category=original_medium" class="dropdown-item font-weight-light text-navy">Original (Medium)</a>
+                                <a href="{% url 'products' %}?category=original_small" class="dropdown-item font-weight-light text-navy">Original (Small)</a>
+                                <a href="{% url 'products' %}?category=print_xl" class="dropdown-item font-weight-light text-navy">Print (XL)</a>
+                                <a href="{% url 'products' %}?category=print_large" class="dropdown-item font-weight-light text-navy">Print (Large)</a>
+                                <a href="{% url 'products' %}?category=print_medium" class="dropdown-item font-weight-light text-navy">Print (Medium)</a>
+                                <a href="{% url 'products' %}?category=small_print" class="dropdown-item font-weight-light text-navy">Print (Small)</a>
+                                <a href="{% url 'products' %}?category=misc" class="dropdown-item font-weight-light text-navy">Miscellaneous</a>
+                                <a href="{% url 'products' %}?category=gift_card" class="dropdown-item font-weight-light text-navy">Gift Cards</a>
                             </div>
                         </div>
                     </div>
@@ -79,8 +77,8 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="mb-0 font-weight-light">{{ product.name }}</p>
-                                            <p class="lead mb-0 text-left font-weight-light">${{ product.price }}</p>
+                                            <p class="mb-0 font-weight-light text-navy">{{ product.name }}</p>
+                                            <p class="lead mb-0 font-weight-light text-navy">${{ product.price }}</p>
                                         </div>
                                     </div>
                                 </div>

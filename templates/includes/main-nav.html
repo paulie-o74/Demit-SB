@@ -1,5 +1,10 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-md-none">
+            <a class="nav-link text-navy mr-5 font-weight-light" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
         <li class="nav-item">
             <a class="nav-link text-navy mr-5 hover-underline-animation font-weight-light" href="#" id="about-link">
                 About
@@ -36,7 +41,7 @@
             </a>
             <div class="dropdown-menu shadow-lg border-0" aria-labelledby="all-products-dd">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item font-weight-light text-navy">By Price</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item font-weight-light text-navy">By Category</a>
+                <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item font-weight-light text-navy">By Name (A-Z)</a>
                 <a href="{% url 'products' %}" class="dropdown-item font-weight-light text-navy">All Products</a>
             </div>
         </li>
