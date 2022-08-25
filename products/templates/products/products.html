@@ -29,10 +29,16 @@
                               Sort {{ products|length }} items by...
                             </button>
                             <div class="dropdown-menu shadow-lg border-0 font-weight-light" aria-labelledby="dropdownsortingmenu">
-                                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item font-weight-light text-navy" >Price (low to high)</a>
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Reset</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <!-- <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item font-weight-light text-navy" >Price (low to high)</a>
                                 <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item font-weight-light text-navy">Price (high to low)</a>
                                 <a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item font-weight-light text-navy">Name (A-Z)</a>
-                                <a href="{% url 'products' %}?sort=name&direction=desc" class="dropdown-item font-weight-light text-navy">Name (Z-A)</a>
+                                <a href="{% url 'products' %}?sort=name&direction=desc" class="dropdown-item font-weight-light text-navy">Name (Z-A)</a> -->
                             </div>
                         </div>
                     </div>
