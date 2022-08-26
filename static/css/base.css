@@ -3,10 +3,13 @@
 /* * {
     outline: 1px solid #f00 !important;
   } */
+html {
+    scroll-behavior: smooth;
+}
 
 a:link {
     text-decoration: none;
-  }
+}
 
 body {
     height: 100%;
@@ -201,6 +204,7 @@ footer {
         transform: scaleX(1);
         transform-origin: bottom left;
     }
+
     .header-container {
         padding-top: 164px;
     }
