@@ -1,8 +1,8 @@
 /* -------------------------------- Full app styling */
 
-/* html {
-    height: 100%;
-} */
+/* * {
+    outline: 1px solid #f00 !important;
+  } */
 
 a:link {
     text-decoration: none;
@@ -10,10 +10,11 @@ a:link {
 
 body {
     height: 100%;
-    /* margin-bottom: 100px; */
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .text-navy {
@@ -135,8 +136,6 @@ body {
     /* Make it stick/fixed */
     top: 0;
     /* Stay on top */
-    width: 100%;
-    /* Full width */
     transition: top 0.5s;
     /* Transition effect when sliding down (and up) */
 }

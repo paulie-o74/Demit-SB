@@ -5,7 +5,7 @@
     <div class="container header-container">
         <div class="row">
             <div class="col-7 col-md-6 my-auto">
-                
+
             </div>
         </div>
     </div>
@@ -14,40 +14,36 @@
 
 
 {% block content %}
-<div class="container mb-2">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">Shopping Bag</h2>
-            <hr class="w-50 mb-1">
-        </div>
-    </div>
+    <div class="container mb-2">
+        {% if bag_items %}
+            <div class="row">
+                <div class="col text-center mt-3">
+                    <h2 class="text-navy">Shopping Bag</h2>
+                    <hr class="w-50 mb-1">
+                </div>
+            </div>
 
-    {% if bag_items %}
-    <div class="row">
-        <div class="col">
-            
-                <div class="table-responsive rounded"></div>
-            
-                <!-- <p class="lead mb-5">Your bag is empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a> -->
-            
+            <div class="table-responsive rounded"></div>
+
+
+        {% else %}
+        <div class="row">
+            <div class="col text-center mt-5">
+                <h2 class="text-navy">Your bag is empty</h2>
+                <hr class="w-50 mb-1">
+            </div>
         </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 text-center text-navy p-5 mx-auto">
+                    <br>
+                    <div class="input-group">
+                        <button onclick="location.href='{% url 'products' %}'" type="button"
+                            class="btn-navy form-control rounded-pill border border-navy">
+                            Continue Shopping
+                        </button>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
     </div>
-    {% else %}
-    <div class="input-group w-50 mx-auto">
-        <h2>
-            Your bag is empty
-        </h2>
-        <br>
-        <button class="btn-navy form-control rounded-pill border border-navy text-center">
-            <a href="{% url 'products' %}"> Shopping</a>
-        </button>
-    </div>
-    {% endif %}
-</div>
 {% endblock %}
