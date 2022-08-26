@@ -88,11 +88,19 @@ body {
     color: white;
 }
 
+.btn-white {
+    background-color: white;
+    color: #103948;
+    border: 1px solid #103948;
+}
+
 .btn-white-bg {
     background-color: white;
 }
 
-
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus,
 .btn-navy:hover,
 .btn-navy:active,
 .btn-navy:focus,

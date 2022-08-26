@@ -32,12 +32,31 @@
                 <p class="lead mb-0 text-navy">€{{ product.price }}</p>
                 <p class="mt-3 text-navy">{{ product.description|linebreaks }}</p>
             </div>
-            <div class="input-group w-100 w-md-75 mx-auto">
-                <!-- Submit button -->
-                <button type="" class="btn-navy form-control rounded-pill border border-navy">
-                    Add to shopping bag
-                </button>
-            </div>
+
+            <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <!-- Hidden quantity for now, may come back to display only if certain type of product is displayed JS -->
+                    <div class="col-12 d-none">
+                        <p class="mt-3"><strong>Quantity:</strong></p>
+                        <div class="form-group w-50">
+                            <div class="input-group">
+                                <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="submit" class="btn-navy form-control rounded-pill border border-navy mt-3" value="Add to Bag">
+                        <button onclick="location.href='{% url 'products' %}'" type="button"
+                            class="btn-white form-control rounded-pill border border-navy mt-5">
+                            Continue Shopping
+                        </button> 
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </div>
+            </form>
+
             <div class="product-details-container mb-5 mt-5">
                 <p class="mt-3 text-navy font-weight-bold"><small>Shipping & Returns</small></p>
                 <p class="text-navy"><small>
