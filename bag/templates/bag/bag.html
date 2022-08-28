@@ -39,19 +39,19 @@
                     <img class="img-thumbnail bag-img rounded" src="{{ item.product.image.url }}">
                 </td>
                 <td class="py-3">
-                    <h4 class="main-logo-font">{{ item.product.name }}</h4>
+                    <h4 class="main-logo-font text-navy">{{ item.product.name }}</h4>
                     <p class="small text-grey">€{{ item.product.price }}</p>
                 </td>
                 <td class="py-3">
-                    <p class="my-0">{{ item.quantity }}</p>
+                    <p class="my-0 text-navy">{{ item.quantity }}</p>
                 </td>
-                <td class="py-3">
+                <td class="py-3 text-navy">
                     <p class="my-0">€{{ item.product.price }}</p>
                 </td>
             </tr>
             {% endfor %}
             <tr>
-                <td colspan="5" class="pt-5 text-right">
+                <td colspan="5" class="pt-5 text-right text-navy">
                     <h6>Subtotal: ${{ total|floatformat:2 }}</h6>
                     <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                     <h4 class="mt-4">Grand Total: ${{ grand_total|floatformat:2 }}</h4>
