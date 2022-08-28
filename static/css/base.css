@@ -56,6 +56,11 @@ body {
     transform: scale(1.1);
 }
 
+.bag-img {
+    max-width: 220px;
+    height: auto;
+}
+
 .p-3 {
     padding: $spacer !important;
 }
