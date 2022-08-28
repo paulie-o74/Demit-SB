@@ -6,7 +6,7 @@
     outline: 1px solid #f00 !important;
   } */
 
-  html {
+html {
     scroll-behavior: smooth;
 }
 
@@ -21,6 +21,18 @@ body {
     font-family: 'Raleway', sans-serif;
     max-width: 100%;
     overflow-x: hidden;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .text-navy {
@@ -120,6 +132,13 @@ body {
     border: 1px solid #103948;
 }
 
+.btn-quantity {
+    background-color: white;
+    color: #103948;
+    border: 0.3px solid grey;
+    border-radius: 4%;
+}
+
 .btn-white-bg {
     background-color: white;
 }
@@ -140,6 +159,11 @@ body {
     color: #103948;
     border: 1px solid #103948;
     border-radius: 50%;
+}
+
+.no-border {
+    border: 0;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
 }
 
 
