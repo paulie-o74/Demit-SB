@@ -28,6 +28,15 @@ body {
     color: #C95D63 !important;
 }
 
+.text-grey {
+    color: grey !important;
+    
+}
+
+.text-navy-light {
+    color: #103948BF !important;
+}
+
 .border-navy {
     border: 1px solid #103948 !important;
 }
@@ -118,6 +127,7 @@ body {
     border: 1px solid #103948;
     border-radius: 50%;
 }
+
 
 
 /* -------------------------------- Social Styling */

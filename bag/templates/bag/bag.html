@@ -2,48 +2,102 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col-7 col-md-6 my-auto">
+<div class="container header-container">
+    <div class="row">
+        <div class="col-7 col-md-6 my-auto">
 
-            </div>
         </div>
     </div>
+</div>
 {% endblock %}
 
 
 
 {% block content %}
-    <div class="container mb-2">
-        {% if bag_items %}
-            <div class="row">
-                <div class="col text-center mt-3">
-                    <h2 class="text-navy">Shopping Bag</h2>
-                    <hr class="w-50 mb-1">
-                </div>
-            </div>
+<div class="container mb-2">
+    {% if bag_items %}
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="text-navy">Shopping Bag</h2>
+            <hr class="w-50 mb-5">
+        </div>
+    </div>
 
-            <div class="table-responsive rounded"></div>
+    <div class="table-responsive rounded">
+        <table class="table table-sm table-borderless">
+            <tr class="text-grey font-weight-lighter">
+                
+                    <td scope="col">Product</td>
+                    <td scope="col"></td>
+                    <td scope="col">Qty</td>
+                    <td scope="col">Subtotal</td>
+            </tr>
+            
+            {% for item in bag_items %}
+            <tr>
+                <td class="py-3 w-25">
+                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                </td>
+                <td class="py-3">
+                    <h4 class="m-2 main-logo-font">{{ item.product.name }}</h4>
+                    <p class="m-2 small text-grey">€{{ item.product.price }}</p>
+                </td>
+                <td class="py-3 w-25">
+                    <p class="my-0">{{ item.quantity }}</p>
+                </td>
+                <td class="py-3">
+                    <p class="my-0">€{{ item.product.price }}</p>
+                </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="5" class="pt-5 text-right">
+                    <h6>Subtotal: ${{ total|floatformat:2 }}</h6>
+                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                    <h4 class="mt-4">Grand Total: ${{ grand_total|floatformat:2 }}</h4>
+                    {% if free_delivery_delta > 0 %}
+                    <p class="mb-1 text-red">
+                        You could get free delivery by spending just ${{ free_delivery_delta }} more!
+                    </p>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+            <button onclick="" type="button" class="btn-navy form-control rounded-pill border border-navy mb-3">
+                Secure checkout
+            </button>
+            <button onclick="location.href='{% url 'products' %}'" type="button"
+                class="btn-white form-control rounded-pill border border-navy mb-3">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
 
 
-        {% else %}
-        <div class="row">
-            <div class="col text-center mt-5">
-                <h2 class="text-navy">Your bag is empty</h2>
-                <hr class="w-50 mb-1">
+    {% else %}
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h2 class="text-navy">Your bag is empty</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 text-center text-navy p-5 mx-auto">
+            <br>
+            <div class="input-group">
+                <button onclick="location.href='{% url 'products' %}'" type="button"
+                    class="btn-navy form-control rounded-pill border border-navy">
+                    Continue Shopping
+                </button>
             </div>
         </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 text-center text-navy p-5 mx-auto">
-                    <br>
-                    <div class="input-group">
-                        <button onclick="location.href='{% url 'products' %}'" type="button"
-                            class="btn-navy form-control rounded-pill border border-navy">
-                            Continue Shopping
-                        </button>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
     </div>
+    {% endif %}
+</div>
 {% endblock %}
