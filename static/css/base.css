@@ -1,9 +1,12 @@
 /* -------------------------------- Full app styling */
 
+/* -------------------------------- Visualizer */
+
 /* * {
     outline: 1px solid #f00 !important;
   } */
-html {
+
+  html {
     scroll-behavior: smooth;
 }
 
@@ -30,7 +33,7 @@ body {
 
 .text-grey {
     color: grey !important;
-    
+
 }
 
 .text-navy-light {
@@ -65,12 +68,9 @@ body {
     padding: $spacer !important;
 }
 
-/* .overlay {
-    z-index: -1;
-} */
-
 
 /* -------------------------------- from Bulma */
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -79,8 +79,17 @@ body {
     width: 1.5rem;
 }
 
+/* -------------------------------- custom extras */
+
 .custom-select {
     font-size: 16px;
+}
+
+.shipping_returns {
+    background-color: #ebebeb;
+    color: #103948;
+    padding: 10px;
+    margin: 10px;
 }
 
 /* -------------------------------- Logo Styling */
@@ -166,20 +175,12 @@ body {
     /* Transition effect when sliding down (and up) */
 }
 
-.shipping_returns {
-    background-color: #ebebeb;
-    color: #103948;
-    padding: 10px;
-    margin: 10px;
-}
-
 /* -------------------------------- Footer styling */
 
 footer {
     background-color: #ebebeb;
     width: 100%;
 }
-
 
 /* -------------------------------- Media Queries */
 
