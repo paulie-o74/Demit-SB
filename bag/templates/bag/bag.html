@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -42,9 +43,10 @@
                     <h4 class="main-logo-font text-navy">{{ item.product.name }}</h4>
                     <p class="small text-grey">€{{ item.product.price }}</p>
                 </td>
-                <td class="py-3 w-25"></td>
+                <td class="py-3 w-25">   
+                </td>
                 <td class="py-3">
-                    <form class="form update-form" method="POST" action="">
+                    <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                         {% csrf_token %}
                         <div class="form-group">
                             <div class="input-group btn-quantity">
@@ -71,19 +73,20 @@
                             </div>
                         </div>
                     </form>
-                    <button class="update-link btn rounded-0 no-border text-info font-weight-lighter" id="">
+                    <button class="update-link btn rounded-0 no-border text-info font-weight-lighter">
                         <span>
                             <i class="fas fa-check fa-sm"></i>
                         </span>
                     </button>
-                    <button class=" btn rounded-0 no-border font-weight-lighter float-right text-red" id="remove_{{ item.item_id }}">
+                    <button class="remove-item btn rounded-0 no-border font-weight-lighter float-right text-red"
+                        id="remove_{{ item.item_id }}">
                         <span>
                             <i class="fas fa-trash fa-sm"></i>
                         </span>
                     </button>
                 </td>
-                <td class="py-3 text-navy text-right">
-                    <p class="my-0">€{{ item.product.price }}</p>
+                <td class="py-3 text-navy">
+                    <p class="my-0 text-right">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </td>
             </tr>
             {% endfor %}
