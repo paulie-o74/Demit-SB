@@ -23,6 +23,8 @@ body {
     overflow-x: hidden;
 }
 
+/* -------------------------------- Select styling */
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -34,6 +36,8 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/* -------------------------------- Colors */
 
 .text-navy {
     color: #103948 !important;
@@ -54,6 +58,29 @@ input[type=number] {
 
 .border-navy {
     border: 1px solid #103948 !important;
+}
+
+/* -------------------------------- from Bulma */
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* -------------------------------- custom extras */
+
+.custom-select {
+    font-size: 16px;
+}
+
+.shipping_returns {
+    background-color: #ebebeb;
+    color: #103948;
+    padding: 10px;
+    margin: 10px;
 }
 
 #delivery-banner {
@@ -78,30 +105,6 @@ input[type=number] {
 
 .p-3 {
     padding: $spacer !important;
-}
-
-
-/* -------------------------------- from Bulma */
-
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-/* -------------------------------- custom extras */
-
-.custom-select {
-    font-size: 16px;
-}
-
-.shipping_returns {
-    background-color: #ebebeb;
-    color: #103948;
-    padding: 10px;
-    margin: 10px;
 }
 
 /* -------------------------------- Logo Styling */
@@ -204,6 +207,23 @@ input[type=number] {
 footer {
     background-color: #ebebeb;
     width: 100%;
+}
+
+/* ------------------------------- bootstrap toasts styling */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /* -------------------------------- Media Queries */
