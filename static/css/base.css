@@ -164,11 +164,15 @@ input[type=number] {
     border-radius: 50%;
 }
 
+.fixed-button{
+    width: 300px;
+    margin: auto;
+}
+
 .no-border {
     border: 0;
     box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
 }
-
 
 
 /* -------------------------------- Social Styling */
