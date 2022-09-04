@@ -14,7 +14,7 @@ var style = {
         color: '#103948',
         fontFamily: '"Raleway", sans-serif',
         fontSmoothing: 'antialiased',
-        fontSize: '12px',
+        fontSize: '16px',
         '::placeholder': {
             color: 'grey'
         }
