@@ -72,13 +72,13 @@
                 </fieldset>
 
                 <div class="submit-button mb-5">
-                    <button id="submit-button" class="btn-navy form-control rounded-pill fixed-button border-navy my-3 float-left">
+                    <button id="submit-button" class="btn-navy form-control rounded-pill fixed-button border-navy my-3">
                         <span class="font-weight-bold">Complete Order</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
                     </button>
-                    <button onclick="location.href='{% url 'view_bag' %}'" class="btn-white form-control rounded-pill fixed-button border-navy mb-3 float-left">
+                    <button onclick="location.href='{% url 'view_bag' %}'" class="btn-white form-control rounded-pill fixed-button border-navy mb-3">
                         <span class="font-weight-bold">Adjust Bag Contents</span>
                     </button>
                 </div>
@@ -129,6 +129,13 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div id="loading-overlay">
+        <h1 class="text-white loading-spinner">
+            <span class="icon">
+                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+            </span>
+        </h1>
     </div>
 
 </div>
