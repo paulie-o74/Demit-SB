@@ -83,7 +83,7 @@ form.addEventListener('submit', function(ev) {
                 }
             },
             shipping: {
-                name: $.trim(form.first_name.value),
+                name: `${form.first_name.value.trim()} ${form.second_name.value.trim()}`,
                 phone: $.trim(form.phone_number.value),
                 address: {
                     line1: $.trim(form.street_address1.value),
