@@ -43,6 +43,7 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 order = Order.objects.get(
+                    # Using the split method to align the form with stripe payment
                     first_name__istartswith=shipping_details.name.split()[0],
                     second_name__icontains=shipping_details.name.split()[1],
                     email__iexact=billing_details.email,
@@ -73,6 +74,7 @@ class StripeWH_Handler:
             order = None
             try:
                 order = Order.objects.create(
+                    # Using the split method to align the form with stripe payment
                     first_name=shipping_details.name.split()[0],
                     second_name=shipping_details.name.split()[1],
                     email=billing_details.email,
