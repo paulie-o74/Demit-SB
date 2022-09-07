@@ -68,7 +68,9 @@ form.addEventListener('submit', function(ev) {
             payment_method: {
                 card: card,
                 billing_details: {
-                    name: $.trim(form.first_name.value),
+                    // Template string to fix the misalignment 
+                    // between model and stripes payment intent
+                    name: `${form.first_name.value.trim()} ${form.second_name.value.trim()}`,
                     phone: $.trim(form.phone_number.value),
                     email: $.trim(form.email.value),
                     address:{
