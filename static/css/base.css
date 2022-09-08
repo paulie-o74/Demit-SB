@@ -193,8 +193,6 @@ input[type=number] {
     color: #C13584;
 }
 
-
-
 /* -------------------------------- Navbar Styling */
 
 #navbar1 {
@@ -207,6 +205,30 @@ input[type=number] {
     /* Stay on top */
     transition: top 0.5s;
     /* Transition effect when sliding down (and up) */
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; 
+    color: #103948;
+}
+
+.allauth-form-inner-content input {
+    border-color: #103948;
+    border-radius: 50rem;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: grey;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
 }
 
 /* -------------------------------- Footer styling */
