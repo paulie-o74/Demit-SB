@@ -110,6 +110,13 @@ input[type=number] {
     padding: $spacer !important;
 }
 
+
+.order-history-thumbnail {
+    max-width: 79px;
+    height: auto;
+}
+
+
 /* -------------------------------- Logo Styling */
 
 .main-logo-font {

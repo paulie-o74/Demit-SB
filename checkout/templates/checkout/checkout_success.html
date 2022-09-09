@@ -204,12 +204,11 @@
             <hr class="my-0">
             <div class=" mb-5 mx-auto">
                 {% if from_profile %}
-                <button onclick="" class="btn-navy form-control rounded-pill fixed-button border-navy">
+                <button onclick="location.href='{% url 'profile' %}'" class="btn-navy form-control rounded-pill fixed-button border-navy my-3">
                     <span class="">User Profile</span>
                 </button>
-                <br>
                 <button onclick="location.href='{% url 'products' %}'"
-                    class="btn-navy form-control rounded-pill fixed-button border-navy">
+                    class="btn-navy form-control rounded-pill fixed-button border-navy my-3">
                     <span class="">Continue Shopping</span>
                 </button>
                 {% else %}
