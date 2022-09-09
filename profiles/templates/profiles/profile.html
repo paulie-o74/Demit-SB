@@ -70,7 +70,7 @@
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                     <p class="my-0 small text-muted">Order No: <a class="text-info"
                             href="{% url 'order_history' order.order_number %}"
-                            title="{{ order.order_number }}">{{ order.order_number|truncatechars:10 }}</a></p>
+                            title="{{ order.order_number }}">{{ order.order_number|truncatechars:8 }}</a></p>
                     <p class="my-0 small text-muted">Date: {{ order.date }}</p>
                 </div>
                 <div class="col-3 text-right">
