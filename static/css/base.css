@@ -264,6 +264,10 @@ footer {
     overflow-y: auto;
 }
 
+.add-product-form {
+    border-radius: 30px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

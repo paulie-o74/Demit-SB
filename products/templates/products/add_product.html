@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col-7 col-md-6 my-auto">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mb-2 p-0">
+    <div class="row justify-content-around">
+        <div class="col-12 col-md-6 text-center mt-3">
+            <h2 class="text-navy">Product Management</h2>
+            <hr class="w-50 mb-5">
+            <p class="text-navy main-logo-font mb-5">Add new merch below <span><i class="fas fa-thumbs-up"></i></span>
+            </p>
+            <br>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-around">
+        <div class="col-12 col-md-6">
+            <form class="form text-muted" method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn-navy form-control rounded-pill border border-navy fixed-button mt-3 mx-auto"
+                    type="submit">Add a product</button>
+                <button onclick="location.href='{% url 'products' %}'" class="btn-navy form-control rounded-pill border border-navy fixed-button my-3 mx-auto"
+                    >Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
