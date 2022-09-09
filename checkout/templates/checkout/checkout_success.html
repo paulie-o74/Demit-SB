@@ -20,6 +20,14 @@
 <div class="container mb-2 p-0">
     <div class="row">
         <div class="col text-center mt-3">
+            {% if from_profile %}
+            <h2 class="text-navy">Order History</h2>
+            <hr class="w-50 mb-5">
+            <p class="text-navy main-logo-font mb-5">Thank you so much for investing in modern art. Patrons like you
+                allow artists to realise their dreams.</p>
+            <br>
+            <p class="text-info mb-5">Please find below the information for order number: {{ order.order_number }}</p>
+            {% else %}
             <h2 class="text-navy">Success!</h2>
             <hr class="w-50 mb-5">
             <p class="text-navy main-logo-font mb-5">Thank you so much for investing in modern art. Patrons like you
@@ -27,6 +35,7 @@
             <br>
             <p class="text-navy mb-5">Your order information is below. A confirmation email will be sent to
                 {{ order.email }}.</p>
+            {% endif %}
         </div>
     </div>
 
