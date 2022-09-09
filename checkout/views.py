@@ -99,7 +99,9 @@ def checkout(request):
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    'email': profile.user.email,
+                    'first_name': profile.default_first_name,
+                    'second_name': profile.default_second_name,
+                    'email': profile.default_email,
                     'phone_number': profile.default_phone_number,
                     'country': profile.default_country,
                     'postcode': profile.default_postcode,
@@ -143,6 +145,9 @@ def checkout_success(request, order_number):
         # Save the user's info
         if save_info:
             profile_data = {
+                'default_first_name': order.first_name,
+                'default_second_name': order.second_name,
+                'default_email': order.email,
                 'default_phone_number': order.phone_number,
                 'default_country': order.country,
                 'default_postcode': order.postcode,
