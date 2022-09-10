@@ -16,7 +16,8 @@
             <div class="image-container my-5">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid card-img p-3" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img class="card-img-top img-fluid card-img p-3" src="{{ product.image.url }}"
+                        alt="{{ product.name }}">
                 </a>
                 {% else %}
                 <a href="">
@@ -31,6 +32,10 @@
                 <br>
                 <p class="lead mb-0 text-navy">€{{ product.price }}</p>
                 <p class="mt-3 text-navy">{{ product.description|linebreaks }}</p>
+                {% if request.user.is_superuser %}
+                    <a class="text-info" href="{% url 'edit_product' product.id %}">Edit</a> |
+                    <a class="text-red" href="{% url 'delete_product' product.id %}">Delete</a>
+                {% endif %}
             </div>
 
             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
@@ -41,17 +46,19 @@
                         <p class="mt-3"><strong>Quantity:</strong></p>
                         <div class="form-group w-50">
                             <div class="input-group">
-                                <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <input class="form-control qty_input" type="number" name="quantity" value="1" min="1"
+                                    max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-12">
-                        <input type="submit" class="btn-navy form-control rounded-pill border border-navy mt-3" value="Add to Bag">
+                        <input type="submit" class="btn-navy form-control rounded-pill border border-navy mt-3"
+                            value="Add to Bag">
                         <button onclick="location.href='{% url 'products' %}'" type="button"
                             class="btn-white form-control rounded-pill border border-navy mt-5">
                             Continue Shopping
-                        </button> 
+                        </button>
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
@@ -60,10 +67,12 @@
             <div class="product-details-container mb-5 mt-5">
                 <p class="mt-3 text-navy font-weight-bold"><small>Shipping & Returns</small></p>
                 <p class="text-navy"><small>
-                    Shipping rates are calculated by the size of the package and shipped via DHL within 10 business days.
-                    <br>
-                    All artworks can be returned in their original packaging and original condition within 14 days of receipt if it is not to your liking.
-                </small></p>
+                        Shipping rates are calculated by the size of the package and shipped via DHL within 10 business
+                        days.
+                        <br>
+                        All artworks can be returned in their original packaging and original condition within 14 days
+                        of receipt if it is not to your liking.
+                    </small></p>
             </div>
         </div>
     </div>

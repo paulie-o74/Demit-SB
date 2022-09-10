@@ -81,15 +81,15 @@
                 <div class="row">
                     {% for product in products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card h-100 border-0 my-auto">
+                        <div class="card h-100 border-0">
                             {% if product.image %}
                             <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid p-3 align-middle card-img"
+                                <img class="card-img img-fluid p-3 align-middle card-img"
                                     src="{{ product.image.url }}" alt="{{ product.name }}">
                             </a>
                             {% else %}
                             <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid p-3" src="{{ MEDIA_URL }}noimage.png"
+                                <img class="card-img img-fluid p-3" src="{{ MEDIA_URL }}noimage.png"
                                     alt="{{ product.name }}">
                             </a>
                             {% endif %}
@@ -99,8 +99,14 @@
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="mb-0 font-weight-light text-navy">{{ product.name }}</p>
-                                        <p class="lead mb-0 font-weight-light text-navy">${{ product.price }}</p>
+                                        <h4 class="mb-1 font-weight-light main-logo-font text-navy">{{ product.name }}</h4>
+                                        <p class="lead mb-1 font-weight-light text-navy">${{ product.price }}</p>
+                                        {% if request.user.is_superuser %}
+                                        <small>
+                                            <a class="text-info" href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                            <a class="text-red" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                                    {% endif %}
                                     </div>
                                 </div>
                             </div>
