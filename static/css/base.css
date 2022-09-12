@@ -73,6 +73,18 @@ input[type=number] {
     width: 1.5rem;
 }
 
+/* -------------------------------- Hero image */
+
+.jumbotron {
+    background-image: url('/media/Hero.png');
+    height: 80vh;
+    width: auto;
+    background-repeat: no-repeat;
+    align-items: center;
+    
+}
+
+
 /* -------------------------------- custom extras */
 
 .custom-select {
