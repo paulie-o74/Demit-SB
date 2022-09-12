@@ -124,6 +124,11 @@ input[type=number] {
     height: auto;
 }
 
+.mobile-search {
+    width: 96%;
+    margin-left: 2%;
+}
+
 
 /* -------------------------------- Logo Styling */
 
