@@ -1,0 +1,38 @@
+<form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group btn-quantity">
+            <div class="input-group-prepend">
+                <button class="decrement-qty btn rounded-0 no-border text-grey font-weight-lighter"
+                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                    <span>
+                        <i class="fas fa-minus fa-sm"></i>
+                    </span>
+                </button>
+            </div>
+            <input
+                class="form-control qty_input no-border text-center text-navy font-weight-lighter"
+                type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+            <div class="input-group-append">
+                <button class="increment-qty btn rounded-0 no-border text-grey font-weight-lighter"
+                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                    <span>
+                        <i class="fas fa-plus fa-sm"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<button class="update-link btn rounded-0 no-border text-info font-weight-lighter">
+    <span>
+        <i class="fas fa-check fa-sm"></i>
+    </span>
+</button>
+<button class="remove-item btn rounded-0 no-border font-weight-lighter float-right text-red"
+    id="remove_{{ item.item_id }}">
+    <span>
+        <i class="fas fa-trash fa-sm"></i>
+    </span>
+</button>
