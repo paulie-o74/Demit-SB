@@ -12,18 +12,32 @@
 {% endblock %}
 
 
-
 {% block content %}
-<div class="container h-100">
 
-    <!-- Hero -->
-        <div class="jumbotron">
-          <h1>Bootstrap Tutorial</h1>
-          <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-          responsive, mobile-first projects on the web.</p>
-        </div>
-        <p>This is some text.</p>
-        <p>This is another text.</p>
-    <!-- Hero -->
+<div class="card bg-dark text-white mb-5 hero-wide">
+    <img class="card-img overlay-wide" src="/media/hero.png" alt="Card image">
+    <div class="card-img-overlay d-flex flex-column justify-content-center">
+        <h1 class="card-title main-logo-font">Fleur</h5>
+            <p class="card-text text-white">Love is the flower you have to let grow.
+                <button onclick="location.href='{% url 'products' %}'" type="button"
+                class="hero-button form-control rounded-pill my-3">
+                Shop Now.
+            </button>
+            </p>
+    </div>
 </div>
+
+<div class="card bg-dark text-white mb-5 hero-narrow">
+    <img class="card-img overlay-narrow" src="/media/hero-alt3.jpeg" alt="Card image">
+    <div class="card-img-overlay d-flex flex-column justify-content-center">
+        <h1 class="card-title main-logo-font justify-content-around">Fleur</h5>
+            <p class="card-text text-white ">Love is the flower you have to let grow.
+                <button onclick="location.href='{% url 'products' %}'" type="button"
+                class="hero-button form-control rounded-pill my-3">
+                Shop Now.
+            </button>
+            </p>
+    </div>
+</div>
+
 {% endblock %}

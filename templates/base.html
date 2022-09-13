@@ -112,7 +112,6 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-
     </header>
     {% if messages %}
         <div class="message-container">
@@ -136,20 +135,14 @@
     {% endblock %}
 
     {% block content %}
+
     {% endblock %}
 
-    <div class="row bg-">
-        <!-- Products Navigation -->
-        <!-- <nav class="navbar navbar-expand-lg navbar-light w-100">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-            aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button> -->
-
-          
-        <!-- </nav> -->
-    </div>
+    {% block page_footer %}
     {% include 'includes/footer.html' %}
+    {% endblock %}
+
+
     {% block postloadjs %}
         <script type="text/javascript">
             $('.toast').toast('show');

@@ -15,7 +15,7 @@ a:link {
 }
 
 body {
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
@@ -75,16 +75,13 @@ input[type=number] {
 
 /* -------------------------------- Hero image */
 
-.jumbotron {
-    background-image: url('/media/Hero.png');
-    height: 80vh;
-    width: auto;
-    background-repeat: no-repeat;
-    align-items: center;
-    
+.overlay-wide {
+    opacity: 80%;
 }
 
-
+.overlay-narrow {
+    opacity: 50%;
+}
 /* -------------------------------- custom extras */
 
 .custom-select {
@@ -170,6 +167,7 @@ input[type=number] {
     border: 1px solid #103948;
 }
 
+
 .btn-quantity {
     background-color: white;
     color: #103948;
@@ -184,6 +182,9 @@ input[type=number] {
 .btn-white:hover,
 .btn-white:active,
 .btn-white:focus,
+.hero-button:hover,
+.hero-button:active,
+.hero-button:focus,
 .btn-navy:hover,
 .btn-navy:active,
 .btn-navy:focus,
@@ -202,6 +203,13 @@ input[type=number] {
 .fixed-button{
     width: 300px;
     margin: auto;
+}
+
+.hero-button {
+    background-color: rgba(0,0,0,0);
+    width: 200px;
+    color: white;
+    border: 2px solid white;
 }
 
 .no-border {
@@ -371,6 +379,18 @@ footer {
     .product-container {
         padding: 0.75rem;
     }
+
+    .card-title {
+        font-size: 5rem;
+    }
+
+    .card-text {
+        font-size: 2rem;
+    }
+
+    .hero-narrow {
+        display: none;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -380,6 +400,10 @@ footer {
     }
 
     .bag-table {
+        display: none;
+    }
+
+    .hero-wide {
         display: none;
     }
 }
