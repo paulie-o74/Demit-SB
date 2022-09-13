@@ -25,25 +25,35 @@
     <div class="d-block d-lg-none">
         <div class="row">
             <div class="col">
+                <div class="col text-center mt-5">
+                    <h4 class="main-logo-font text-navy">Please revise the contents of your bag below</h4>
+                    <hr class="w-50 mb-1">
+                </div>
                 {% for item in bag_items %}
-                <div class="row justify-content-around">
-                    <div class="col-8 mb-2 text-center">
+                <div class="row justify-content-around my-5">
+                    <div class="col-10 mb-2 text-center">
                         {% include "bag/product-image.html" %}
                     </div>
-                    <div class="col-8 col-sm-10 mb-2 text-center">
+                    <div class="col-8 col-sm-10 mb-0 text-center">
                         {% include "bag/product-info.html" %}
+                        <p class="small text-grey mb-2">Qty:{{ item.quantity }}</p>
                     </div>
                     <div class="col-6 col-sm-4 mb-2">
                         {% include "bag/quantity-form.html" %}
                     </div>
+                </div>
+                <hr>
+                {% endfor %}
+                <div class="row justify-content-around mb-5">
                     <div class="col-8 col-sm-10 mb-2 text-center">
                         {% include "bag/bag-total.html" %}
                     </div>
-                    <div class="col-8 col-sm-6 mb-2">
-                        {% include "bag/checkout-buttons.html" %}
-                    </div>
                 </div>
-                {% endfor %}
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col-10 mx-auto p-0">
+                {% include "bag/checkout-buttons.html" %}
             </div>
         </div>
     </div>
@@ -78,12 +88,14 @@
                 </td>
             </tr>
         </table>
+
     </div>
-    <div class="row bag-table">
-        <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+    <div class="row m-0 bag-table">
+        <div class="col-5 offset-7 p-0">
             {% include "bag/checkout-buttons.html" %}
         </div>
     </div>
+
 
     <!-- Empty shopping bag look -->
     {% else %}

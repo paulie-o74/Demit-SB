@@ -111,7 +111,7 @@ input[type=number] {
 }
 
 .bag-img {
-    max-width: 220px;
+    max-width: 90%;
     height: auto;
 }
 
