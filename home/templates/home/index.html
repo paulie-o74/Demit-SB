@@ -3,11 +3,11 @@
 
 {% block page_header %}
 <div class="container header-container">
-    <div class="row">
-        <div class="col-7 col-md-6 my-auto">
+  <div class="row">
+    <div class="col-7 col-md-6 my-auto">
 
-        </div>
     </div>
+  </div>
 </div>
 {% endblock %}
 
@@ -15,69 +15,97 @@
 {% block content %}
 
 <div class="card bg-dark text-white mb-5 hero-wide">
-    <img class="card-img overlay-wide" src="/media/hero.png" alt="Card image">
-    <div class="card-img-overlay d-flex flex-column justify-content-center">
-        <h1 class="card-title main-logo-font">Fleur</h5>
-            <p class="card-text text-white">Love is the flower you have to let grow.
-                <button onclick="location.href='{% url 'products' %}'" type="button"
-                    class="hero-button form-control rounded-pill my-3">
-                    Shop Now.
-                </button>
-            </p>
-    </div>
+  <img class="card-img overlay-wide" src="/media/hero.png" alt="Card image">
+  <div class="card-img-overlay d-flex flex-column justify-content-center">
+    <h1 class="card-title main-logo-font">Fleur</h5>
+      <p class="card-text text-white">Love is the flower you have to let grow.
+        <button onclick="location.href='{% url 'products' %}'" type="button"
+          class="hero-button form-control rounded-pill my-3">
+          Shop Now.
+        </button>
+      </p>
+  </div>
 </div>
 
 <div class="card bg-dark text-white mb-5 hero-narrow">
-    <img class="card-img overlay-narrow" src="/media/hero-alt3.jpeg" alt="Card image">
-    <div class="card-img-overlay d-flex flex-column justify-content-center">
-        <h1 class="card-title main-logo-font justify-content-around">Fleur</h5>
-            <p class="card-text text-white ">Love is the flower you have to let grow.
-                <button onclick="location.href='{% url 'products' %}'" type="button"
-                    class="hero-button form-control rounded-pill my-3">
-                    Shop Now.
-                </button>
-            </p>
-    </div>
+  <img class="card-img overlay-narrow" src="/media/hero-alt3.jpeg" alt="Card image">
+  <div class="card-img-overlay d-flex flex-column justify-content-center">
+    <h1 class="card-title main-logo-font justify-content-around">Fleur</h5>
+      <p class="card-text text-white ">Love is the flower you have to let grow.
+        <button onclick="location.href='{% url 'products' %}'" type="button"
+          class="hero-button form-control rounded-pill my-3">
+          Shop Now.
+        </button>
+      </p>
+  </div>
 </div>
 
 <div class="container my-5 mx-auto">
-    <h3 class="main-logo-font text-navy text-center">Demit</h3>
-    <p class="text-grey text-center">
-        Demit studied art at the University of California, Berkeley. After a couple years of professional soccer, he
-        pursued a new career in photography and filmmaking. Throughout this time he began to hone his craft, experiement
-        with his style and is now one of the premier up and coming US artists.
-    </p>
+  <h3 class="main-logo-font text-navy text-center">Demit</h3>
+  <p class="text-grey text-center">
+    Demit studied art at the University of California, Berkeley. After a couple years of professional soccer, he
+    pursued a new career in photography and filmmaking. Throughout this time he began to hone his craft, experiement
+    with his style and is now one of the premier up and coming US artists.
+  </p>
 </div>
 
 
 <h3 class="text-navy main-logo-font mx-auto mt-5 mb-3">Commissions</h3>
 <div class="card-deck mb-5 mx-3">
-    <div class="card">
-      <img src="/media/AW10.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title-index text-navy">Card title</h5>
-        <p class="card-text-index text-navy"><small class="text-muted">€50.00</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="/media/AW31.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title-index text-navy">Card title</h5>
-        <p class="card-text-index text-navy"><small class="text-muted">€50.00</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="/media/AW33.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title-index text-navy">Card title</h5>
-        <p class="card-text-index text-navy"><small class="text-muted">€50.00</small></p>
-      </div>
+  <div class="card">
+    <img src="/media/AW10.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-index text-navy">Card title</h5>
+      <p class="card-text-index text-navy"><small class="text-muted">€50.00</small></p>
     </div>
   </div>
+  <div class="card">
+    <img src="/media/AW31.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-index text-navy">Card title</h5>
+      <p class="card-text-index text-navy"><small class="text-muted">€50.00</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/media/AW33.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title-index text-navy">Card title</h5>
+      <p class="card-text-index text-navy"><small class="text-muted">€50.00</small></p>
+    </div>
+  </div>
+</div>
 
-  <h3 class="text-navy main-logo-font mx-auto mt-5 mb-3">Shows</h3>
+<div class="container my-5 mx-auto">
+  <h3 class="text-navy main-logo-font text-center mt-5 mb-3">Gap x Demit</h3>
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qN3OueBm9F4" allowfullscreen></iframe>
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FZn-95tkh-A" allowfullscreen></iframe>
   </div>
+</div>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-sm text-center text-navy">
+      <h4 class="main-logo-font">Collabs</h4>
+      <p>If you are a brand manager, looking to
+        collaborate on a particular project in Art,
+        Fashion. music or video then make contact
+        via this form to organise a meeting with
+        Demit.</p>
+    </div>
+    <div class="col-sm text-center text-navy">
+      <h4 class="main-logo-font">Commissions</h4>
+      <p>If you would like to commission a one of a
+        kind piece and support a budding artis, reach
+        out today to organise an initial consultation.</p>
+    </div>
+    <div class="col-sm text-center text-navy">
+      <h4 class="main-logo-font">Murals</h4>
+      <p>If you have a business or store and are
+        interested in giving the space(s) a more
+        intimate, individual feel, reach out today to
+        arrange a consultation with Demit.</p>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
