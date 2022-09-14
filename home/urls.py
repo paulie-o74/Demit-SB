@@ -7,5 +7,4 @@ urlpatterns = [
     path('collabs/', views.collabs, name="collabs"),
     path('murals/', views.murals, name="murals"),
     path('paintings/', views.paintings, name="paintings"),
-    path('contact/', views.contact, name="contact"),
 ]

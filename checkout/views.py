@@ -94,7 +94,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with any info the user has saved in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
