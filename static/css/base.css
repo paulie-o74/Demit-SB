@@ -150,6 +150,7 @@ input[type=number] {
 }
 
 
+
 /* -------------------------------- Logo Styling */
 
 .main-logo-font {
@@ -250,7 +251,7 @@ input[type=number] {
     background-color: white;
     color: #103948;
     position: fixed;
-    z-index: +1;
+    z-index: +15;
     /* Make it stick/fixed */
     top: 0;
     /* Stay on top */
