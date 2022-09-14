@@ -6,21 +6,19 @@
         </button>
     </div>
     <div class="toast-body bg-white text-navy">
-        {{ message }}        
+        {{ message }}
     </div>
     {% if grand_total and not on_profile_page %}
-    <div class="bag-notification-wrapper">
-        <div class="row">
-            <div class="col-10 mx-auto">
-                <button onclick="location.href='{% url 'view_bag' %}'"
-                    class="btn-navy form-control rounded-pill border border-navy mt-3" type="button">
-                    <span class="text-uppercase">View Shopping bag</span>
-                </button>
-                <button onclick="location.href='{% url 'products' %}'" type="button"
-                class="btn-navy form-control rounded-pill border border-navy">
-                <span class="text-uppercase">Continue Shopping</span>
+    <div class="row">
+        <div class="col-10 mx-auto">
+            <button onclick="location.href='{% url 'view_bag' %}'"
+                class="btn-navy form-control rounded-pill border border-navy mb-3" type="button">
+                <span class="text-uppercase">View Shopping bag</span>
             </button>
-            </div>
+            <button onclick="location.href='{% url 'products' %}'" type="button"
+            class="btn-navy form-control rounded-pill border border-navy my-3">
+            <span class="text-uppercase">Continue Shopping</span>
+        </button>
         </div>
     </div>
     {% endif %}
