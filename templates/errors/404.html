@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col-7 col-md-6 my-auto">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container mb-2 p-1">
+        <div class="row">
+            <div class="col text-center mt-5">
+                <h2 class="text-navy">Oooppps! 404 </h2>
+                <hr class="w-50 mb-1">
+                <img src="/media/sad.webp" alt="sad_girl" class="mx-auto w-50">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-8 text-center text-navy p-5 mx-auto">
+                <br>
+                <div class="input-group">
+                    <button onclick="location.href='{% url 'index' %}'" type="button"
+                        class="btn-navy form-control rounded-pill border border-navy">
+                        Take me home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
