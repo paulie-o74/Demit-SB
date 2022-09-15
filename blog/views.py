@@ -1,8 +1,11 @@
-from .models import Post
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.contrib import messages
-from .forms import CommentForm
-from django.shortcuts import render, get_object_or_404
+from .models import Post
+from .forms import CommentForm, PostForm
+
+
 
 
 class PostList(generic.ListView):
@@ -56,3 +59,74 @@ class PostDetail(View):
                 "comment_form": comment_form,
             },
         )
+
+
+@login_required
+def add_post(request):
+    """ Add a post to the journal """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            form.save()
+            messages.success(request, 'Successfully added post!')
+            return redirect(reverse('post_detail', args=[post.slug]))
+        else:
+            messages.error(request, 'Failed to add post. Please ensure the form is valid.')
+    else:
+        form = PostForm()
+        
+    template = 'blog/add_post.html',
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+# @login_required
+# def edit_product(request, post_id):
+#     """ Edit a post in the journal """
+#     if not request.user.is_superuser:
+#         messages.error(request, 'Sorry, only store owners can do that.')
+#         return redirect(reverse('home'))
+
+#     post = get_object_or_404(Post, pk=post_id)
+#     if request.method == 'POST':
+#         form = PostForm(request.POST, request.FILES, instance=post)
+#         if form.is_valid():
+#             post = form.save(commit=False)
+#             post.author = request.user
+#             form.save()
+#             messages.success(request, 'Successfully updated post!')
+#             return redirect(reverse('product_detail', args=[post.id]))
+#         else:
+#             messages.error(request, 'Failed to update post. Please ensure the form is valid.')
+#     else:
+#         form = PostForm(instance=post)
+
+#     template = 'blog/edit_post.html'
+#     context = {
+#         'form': form,
+#         'post': post,
+#     }
+
+#     return render(request, template, context)
+
+
+@login_required
+def delete_product(request, product_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))
+    

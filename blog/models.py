@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.utils.text import slugify
 
 
 STATUS = (
@@ -17,6 +18,10 @@ class Post(models.Model):
     image = models.ImageField(null=True, blank=True)
     created_on = models.DateTimeField(default=timezone.now)
     status = models.IntegerField(choices=STATUS, default=0)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
 
     class Meta:
         ordering = ['-created_on']

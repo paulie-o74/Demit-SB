@@ -25,7 +25,12 @@
                 <div class="card-body">
                     <h4 class="card-title-index main-logo-font">{% block title %} {{ post.title }} {% endblock title %}
                     </h4>
-                    <p class="card-text-index text-muted"><small>{{ post.created_on}}</small></p>
+                    <p class="card-text-index text-muted"><small>{{ post.created_on}} | 
+                        {% if request.user.is_superuser %}
+                            <a class="text-info" href="#">Edit</a> | 
+                            <a class="text-red" href="#">Delete</a>
+                        </small>
+                    {% endif %}</p>
                     <p class="card-text-index">{{ post.content | safe }}</p>
                 </div>
             </div>

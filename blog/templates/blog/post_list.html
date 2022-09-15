@@ -45,6 +45,12 @@
                     <h4 class="card-title-index main-logo-font">{{ post.title }}</h4>
                     <p class="card-text-index text-muted"><small>{{ post.author }} | {{ post.created_on}}</small></p>
                     <p class="card-text-index">{{post.content|slice:":200" }} ...<a href="{% url 'post_detail' post.slug  %}" class="text-info"> continue reading &rarr;</a></p>
+                    {% if request.user.is_superuser %}
+                    <small>
+                        <a class="text-info" href="#">Edit</a> | 
+                        <a class="text-red" href="#">Delete</a>
+                    </small>
+                {% endif %}
                 </div>
             </div>
             {% endfor %}
