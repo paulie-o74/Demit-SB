@@ -18,7 +18,7 @@
         <div class="col-12 col-md-6 text-center mt-3">
             <h2 class="text-navy">My Journal</h2>
             <hr class="w-50 mb-5">
-            <p class="text-navy main-logo-font mb-5">Feel free to comment on any of my new projects, I love to receive feedback <span><i class="fas fa-thumbs-up"></i></span>
+            <p class="text-navy main-logo-font mb-5">Keep up to date on recent or upcoming shows/projects, all feedback welcome <span><i class="fas fa-thumbs-up"></i></span>
             </p>
             <br>
         </div>
@@ -29,23 +29,22 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8 mt-3 mx-auto">
             {% for post in post_list %}
-            <div class="card mb-4">
+            <div class="card mb-4 text-navy">
                 {% if post.image %}
                 <a href="{% url 'post_detail' post.slug  %}">
-                    <img class="card-img img-fluid p-3 align-middle card-img"
-                        src="{{ post.image }}" alt="{{ post.title }}">
+                    <img class="card-img-top p-3 align-middle"
+                        src="{{ post.image.url }}" alt="{{ post.title }}">
                 </a>
                 {% else %}
                 <a href="{% url 'post_detail' post.slug  %}">
-                    <img class="card-img img-fluid p-3" src="{{ MEDIA_URL }}noimage.png"
+                    <img class="card-img-top p-3 align-middle" src="{{ MEDIA_URL }}noimage.png"
                         alt="{{ post.title }}">
                 </a>
                 {% endif %}
                 <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                    <h4 class="card-title-index main-logo-font">{{ post.title }}</h4>
+                    <p class="card-text-index text-muted"><small>{{ post.author }} | {{ post.created_on}}</small></p>
+                    <p class="card-text-index">{{post.content|slice:":200" }} ...<a href="{% url 'post_detail' post.slug  %}" class="text-info"> continue reading &rarr;</a></p>
                 </div>
             </div>
             {% endfor %}
