@@ -1,12 +1,15 @@
 from .models import Post
+from django.views import generic
+
 from .forms import CommentForm
 from django.shortcuts import render, get_object_or_404
 
 
 class PostList(generic.ListView):
+    model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'journal.html'
-    paginate_by = 3
+    paginate_by = 4
 
 
 def post_detail(request, slug):
