@@ -15,9 +15,9 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
     content = models.TextField()
-    image = models.ImageField(null=True, blank=True)
     created_on = models.DateTimeField(default=timezone.now)
     status = models.IntegerField(choices=STATUS, default=0)
+    image = models.ImageField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)

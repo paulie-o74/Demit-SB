@@ -27,8 +27,8 @@
                     </h4>
                     <p class="card-text-index text-muted"><small>{{ post.created_on}} | 
                         {% if request.user.is_superuser %}
-                            <a class="text-info" href="#">Edit</a> | 
-                            <a class="text-red" href="#">Delete</a>
+                            <a class="text-info" href="{% url 'edit_post' post.slug %}">Edit</a> | 
+                            <a class="text-red" href="{% url 'delete_post' post.slug %}">Delete</a>
                         </small>
                     {% endif %}</p>
                     <p class="card-text-index">{{ post.content | safe }}</p>

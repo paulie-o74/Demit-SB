@@ -16,7 +16,7 @@
 <div class="container mb-2 p-3">
     <div class="row justify-content-around">
         <div class="col-12 col-md-6 text-center mt-3">
-            <h2 class="text-navy">Add a new Journal Post</h2>
+            <h2 class="text-navy">Edit a Journal Post</h2>
             <hr class="w-50 mb-5">
             <p class="text-navy main-logo-font mb-5">Let everybody know what's going on <span><i class="fas fa-thumbs-up"></i></span>
             </p>
@@ -27,7 +27,7 @@
 
     <div class="row justify-content-around">
         <div class="col-12 col-md-6">
-            <form class="form text-muted" method="POST" action="{% url 'add_post' %}" enctype="multipart/form-data">
+            <form class="form text-muted" method="POST" action="{% url 'edit_post' post.slug %}" enctype="multipart/form-data">
                     <!-- In this form we need to include the encryption type because if 
                         you upload images without it then it might night upload correctly -->
                         {% csrf_token %}
@@ -39,7 +39,7 @@
                             {% endif %}
                         {% endfor %}
                 <button class="btn-navy form-control rounded-pill border border-navy fixed-button mt-3 mx-auto"
-                    type="submit">Add Post</button>
+                    type="submit">Edit Post</button>
                 <button onclick="location.href='{% url 'home' %}'" class="btn-navy form-control rounded-pill border border-navy fixed-button my-3 mx-auto"
                     >Cancel</button>
             </form>

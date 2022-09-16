@@ -47,8 +47,8 @@
                     <p class="card-text-index">{{post.content|slice:":200" }} ...<a href="{% url 'post_detail' post.slug  %}" class="text-info"> continue reading &rarr;</a></p>
                     {% if request.user.is_superuser %}
                     <small>
-                        <a class="text-info" href="#">Edit</a> | 
-                        <a class="text-red" href="#">Delete</a>
+                        <a class="text-info" href="{% url 'edit_post' post.slug %}">Edit</a> | 
+                        <a class="text-red" href="{% url 'delete_post' post.slug %}">Delete</a>
                     </small>
                 {% endif %}
                 </div>

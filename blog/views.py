@@ -88,45 +88,45 @@ def add_post(request):
     return render(request, template, context)
 
 
-# @login_required
-# def edit_product(request, post_id):
-#     """ Edit a post in the journal """
-#     if not request.user.is_superuser:
-#         messages.error(request, 'Sorry, only store owners can do that.')
-#         return redirect(reverse('home'))
+@login_required
+def edit_post(request, slug):
+    """ Edit a post in the journal """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
-#     post = get_object_or_404(Post, pk=post_id)
-#     if request.method == 'POST':
-#         form = PostForm(request.POST, request.FILES, instance=post)
-#         if form.is_valid():
-#             post = form.save(commit=False)
-#             post.author = request.user
-#             form.save()
-#             messages.success(request, 'Successfully updated post!')
-#             return redirect(reverse('product_detail', args=[post.id]))
-#         else:
-#             messages.error(request, 'Failed to update post. Please ensure the form is valid.')
-#     else:
-#         form = PostForm(instance=post)
+    post = get_object_or_404(Post, slug=slug)
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            form.save()
+            messages.success(request, 'Successfully updated post!')
+            return redirect(reverse('post_detail', args=[post.slug]))
+        else:
+            messages.error(request, 'Failed to update post. Please ensure the form is valid.')
+    else:
+        form = PostForm(instance=post)
 
-#     template = 'blog/edit_post.html'
-#     context = {
-#         'form': form,
-#         'post': post,
-#     }
+    template = 'blog/edit_post.html'
+    context = {
+        'form': form,
+        'post': post,
+    }
 
-#     return render(request, template, context)
+    return render(request, template, context)
 
 
 @login_required
-def delete_product(request, product_id):
+def delete_post(request, slug):
     """ Delete a product from the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
+    post = get_object_or_404(Post, slug=slug)
+    post.delete()
+    messages.success(request, 'Post deleted!')
+    return redirect(reverse('blog'))
     
