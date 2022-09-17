@@ -25,12 +25,12 @@
                 <div class="card-body">
                     <h4 class="card-title-index main-logo-font">{% block title %} {{ post.title }} {% endblock title %}
                     </h4>
-                    <p class="card-text-index text-muted"><small>{{ post.created_on}} | 
-                        {% if request.user.is_superuser %}
-                            <a class="text-info" href="{% url 'edit_post' post.slug %}">Edit</a> | 
-                            <a class="text-red" href="{% url 'delete_post' post.slug %}">Delete</a>
-                        </small>
-                    {% endif %}</p>
+                    <p class="card-text-index text-muted"><small>{{ post.created_on}} </small>
+                            {% if request.user.is_superuser %}
+                            <small><a class="text-info" href="{% url 'edit_post' post.slug %}">| Edit</a> |
+                            <a class="text-red" href="{% url 'delete_post' post.slug %}">Delete</a></small>
+                        
+                        {% endif %}</p>
                     <p class="card-text-index">{{ post.content | safe }}</p>
                 </div>
             </div>
@@ -44,6 +44,9 @@
                         <div class="comments">
                             <p class="card-text-index text-muted"><small>
                                     {{ comment.name }} commented on {{ comment.created_on }}
+                                    | {% if request.user.username == comment.name %}
+                                    <a class="text-red" href="{% url 'delete_comment' comment.pk %}">Delete</a>
+                                    {% endif %}
                                 </small>
                                 <br>
                                 {{ comment.body | linebreaks }}</p>
@@ -64,7 +67,8 @@
                                 class="btn-navy form-control rounded-pill fixed-button border-navy my-3">Submit</button>
                         </form>
                     {% else %}
-                        <p class="card-text-index"><a href="{% url 'account_login' %}" class="text-info">Log in</a> or <a href="{% url 'account_signup' %}" class="text-info">Sign up</a> to leave a comment.</p>
+                        <p class="card-text-index"><a href="{% url 'account_login' %}" class="text-info">Log in</a> or <a
+                                href="{% url 'account_signup' %}" class="text-info">Sign up</a> to leave a comment.</p>
                     {% endif %}
                     {% endif %}
                 </div>

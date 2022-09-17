@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.contrib import messages
-from .models import Post
+from django.http import HttpResponseRedirect
+
+from .models import Post, Comment
 from .forms import CommentForm, PostForm
+
 
 
 
@@ -129,4 +132,10 @@ def delete_post(request, slug):
     post.delete()
     messages.success(request, 'Post deleted!')
     return redirect(reverse('blog'))
-    
+
+
+@login_required
+def delete_comment(request, pk):
+    """ Delete a comment in the journal """
+    Comment.objects.get(pk=pk).delete()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
