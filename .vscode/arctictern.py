@@ -7,12 +7,10 @@ import json
 import os
 import requests
 import shutil
-import subprocess
 import sys
 from os.path import exists
 
 BASE_URL = "https://raw.githubusercontent.com/Code-Institute-Org/gitpod-full-template/master/"
-
 BACKUP = True
 MIGRATE = False
 CURRENT_VERSION = 1.0

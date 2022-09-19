@@ -6,7 +6,6 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 
 
-
 def contact(request):
     """
     Shows and submits the contact form.
@@ -16,15 +15,16 @@ def contact(request):
         if contact_form.is_valid():
             subject = "Website enquiry"
             body = {
-            'first_name': contact_form.cleaned_data['first_name'],
-            'second_name': contact_form.cleaned_data['second_name'],
-            'email': contact_form.cleaned_data['email'],
-            'phone_number': contact_form.cleaned_data['phone_number'],
-            'message': contact_form.cleaned_data['message'],
+                    'first_name': contact_form.cleaned_data['first_name'],
+                    'second_name': contact_form.cleaned_data['second_name'],
+                    'email': contact_form.cleaned_data['email'],
+                    'phone_number': contact_form.cleaned_data['phone_number'],
+                    'message': contact_form.cleaned_data['message'],
             }
             message = "\n".join(body.values())
             try:
-                send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, ['pauloriordan74@gmail.com'])
+                send_mail(subject, message, settings.DEFAULT_FROM_EMAIL,
+                          ['pauloriordan74@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             contact_form.save()

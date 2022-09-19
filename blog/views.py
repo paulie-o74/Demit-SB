@@ -8,9 +8,6 @@ from .models import Post, Comment
 from .forms import CommentForm, PostForm
 
 
-
-
-
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -34,7 +31,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -82,7 +79,7 @@ def add_post(request):
             messages.error(request, 'Failed to add post. Please ensure the form is valid.')
     else:
         form = PostForm()
-        
+
     template = 'blog/add_post.html',
     context = {
         'form': form,

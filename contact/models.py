@@ -11,7 +11,6 @@ class Contact(models.Model):
     class Meta:
         verbose_name_plural = 'Messages'
 
-    
     first_name = models.CharField(max_length=50, null=False, blank=False)
     second_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
