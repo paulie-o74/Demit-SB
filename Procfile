@@ -1,1 +1,1 @@
-web: gunicorn demit-sb.wsgi:application
+web: gunicorn demit.wsgi:application
