@@ -5,20 +5,30 @@
 {% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
 
 {% block inner_content %}
-    <h2 class="text-navy text-center">{% trans "Verify Your E-mail Address" %}</h2>
-    <hr class="w-50 mb-5">
+<h2 class="text-navy text-center">{% trans "Verify Your E-mail Address" %}</h2>
+<hr class="w-50 mb-5">
 
-    {% url 'account_email' as email_url %}
+{% url 'account_email' as email_url %}
 
-    <p class="text-navy text-center">{% blocktrans %}This part of the site requires us to verify that
+<p class="text-navy text-center">{% blocktrans %}This part of the site requires us to verify that
     you are who you claim to be. For this purpose, we require that you
     verify ownership of your e-mail address. {% endblocktrans %}</p>
 
-    <p class="text-navy text-center">{% blocktrans %}We have sent an e-mail to you for
+<p class="text-navy text-center mb-3">{% blocktrans %}We have sent an e-mail to you for
     verification. Please click on the link inside this e-mail. Please
     contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
 
-    <p class="text-navy text-center">{% blocktrans %}<strong>Note:</strong> you can still <a class="text-info" href="{{ email_url }}">change your e-mail address</a>.{% endblocktrans %}</p>
+<button onclick="location.href='{% url 'products' %}'" type="button"
+    class="btn-navy form-control rounded-pill border border-navy fixed-button mt-3 mx-auto">
+    Continue Shopping
+</button>
+<button onclick="location.href='{% url 'contact' %}'" type="button"
+    class="btn-white form-control rounded-pill fixed-button border-navy mb-3">
+    Contact
+</button>
+
+<p class="text-navy text-center">{% blocktrans %}<strong>Note:</strong> you can still <a class="text-info"
+        href="{{ email_url }}">change your e-mail address</a>.{% endblocktrans %}</p>
 
 
 {% endblock %}
