@@ -92,7 +92,6 @@ def add_product(request):
     context = {
         'form': form,
     }
-
     return render(request, template, context)
 
 
