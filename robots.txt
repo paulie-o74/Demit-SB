@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /profiles/
+sitemap: https://demit-sb.herokuapp.com/sitemap.xml
