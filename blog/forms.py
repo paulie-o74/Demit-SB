@@ -5,7 +5,7 @@ from .widgets import CustomClearableFileInput
 
 class CommentForm(forms.ModelForm):
     """
-    All details of the comment form
+    All details of the Comment form
     """
     class Meta:
         model = Comment
