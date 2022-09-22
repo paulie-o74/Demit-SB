@@ -3,7 +3,13 @@ from .models import Contact
 
 
 class ContactForm(forms.ModelForm):
+    """
+    Contact form class
+    """
     class Meta:
+        """
+        Meta class for shbow fields
+        """
         model = Contact
         fields = ('first_name', 'second_name', 'email', 'phone_number',
                   'message',

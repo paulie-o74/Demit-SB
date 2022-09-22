@@ -7,8 +7,10 @@ class Contact(models.Model):
     """
     Contact Model
     """
-
     class Meta:
+        """
+        Set verbose name
+        """
         verbose_name_plural = 'Messages'
 
     first_name = models.CharField(max_length=50, null=False, blank=False)

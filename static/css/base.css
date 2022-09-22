@@ -6,6 +6,8 @@
     outline: 1px solid #f00 !important;
   } */
 
+/* -------------------------------- Visualizer */
+
 html {
     scroll-behavior: smooth;
 }
@@ -28,13 +30,13 @@ body {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 /* -------------------------------- Colors */
@@ -89,6 +91,7 @@ input[type=number] {
     height: 75vh;
 
 }
+
 /* -------------------------------- custom extras */
 
 .custom-select {
@@ -138,7 +141,6 @@ input[type=number] {
     width: fit-content;
 }
 
-
 .order-history-thumbnail {
     max-width: 79px;
     height: auto;
@@ -148,8 +150,6 @@ input[type=number] {
     width: 96%;
     margin-left: 2%;
 }
-
-
 
 /* -------------------------------- Logo Styling */
 
@@ -165,7 +165,6 @@ input[type=number] {
     width: fit-content;
 }
 
-
 /* -------------------------------- Button Styling */
 
 .btn-navy {
@@ -178,7 +177,6 @@ input[type=number] {
     color: #103948;
     border: 1px solid #103948;
 }
-
 
 .btn-quantity {
     background-color: white;
@@ -212,13 +210,13 @@ input[type=number] {
     border-radius: 50%;
 }
 
-.fixed-button{
+.fixed-button {
     width: 300px;
     margin: auto;
 }
 
 .hero-button {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     width: 200px;
     color: white;
     border: 2px solid white;
@@ -226,9 +224,8 @@ input[type=number] {
 
 .no-border {
     border: 0;
-    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+    box-shadow: none;
 }
-
 
 /* -------------------------------- Social Styling */
 
@@ -262,7 +259,7 @@ input[type=number] {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; 
+    margin-top: 1.5rem;
     color: #103948;
 }
 
@@ -280,7 +277,8 @@ input[type=number] {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+    color: #17a2b8;
+    /* text-info */
 }
 
 /* -------------------------------- Footer styling */
@@ -289,7 +287,6 @@ footer {
     background-color: #ebebeb;
     width: 100%;
 }
-
 
 /* ------------------------------- bootstrap toasts styling */
 
@@ -337,7 +334,6 @@ footer {
     border-color: #dc3545;
 }
 
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -351,7 +347,7 @@ footer {
     }
 }
 
-/* fixed top navbar only on medium and up ... try to change this with the fixed and rolling menu */
+/* fixed top navbar only on medium and up  */
 @media (min-width: 992px) {
     .hover-underline-animation {
         display: inline-block;
@@ -388,7 +384,7 @@ footer {
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
-    } 
+    }
 
     .product-container {
         padding: 0.75rem;
@@ -407,8 +403,9 @@ footer {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+
 @media (max-width: 991px) {
+    /* pad the top a bit when navbar is collapsed on mobile */
     .header-container {
         padding-top: 116px;
     }

@@ -4,6 +4,9 @@ from .widgets import CustomClearableFileInput
 
 
 class CommentForm(forms.ModelForm):
+    """
+    All details of the comment form
+    """
     class Meta:
         model = Comment
         fields = ('body',)
@@ -30,6 +33,9 @@ class CommentForm(forms.ModelForm):
 
 
 class PostForm(forms.ModelForm):
+    """
+    All details of the post form
+    """
     class Meta:
         model = Post
         exclude = ('author', 'slug',)

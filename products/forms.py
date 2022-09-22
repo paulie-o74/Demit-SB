@@ -4,8 +4,13 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-
+    """
+    Set the form to add products
+    """
     class Meta:
+        """
+        Meta class for products
+        """
         model = Product
         fields = '__all__'
 

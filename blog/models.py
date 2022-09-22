@@ -11,6 +11,9 @@ STATUS = (
 
 
 class Post(models.Model):
+    """
+    All details of the post model
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
@@ -26,13 +29,22 @@ class Post(models.Model):
         super().save(*args, **kwargs)
 
     class Meta:
+        """
+        Meta class for ordering
+        """
         ordering = ['-created_on']
 
     def __str__(self):
+        """
+        To return it's title
+        """
         return self.title
 
 
 class Comment(models.Model):
+    """
+    All details of the comment model
+    """
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='comments')
     name = models.CharField(max_length=80)
@@ -42,7 +54,13 @@ class Comment(models.Model):
     active = models.BooleanField(default=False)
 
     class Meta:
+        """
+        Meta class for ordering
+        """
         ordering = ['created_on']
 
     def __str__(self):
+        """
+        To return a string
+        """
         return 'Comment {} by {}'.format(self.body, self.name)

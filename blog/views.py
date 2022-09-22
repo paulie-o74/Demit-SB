@@ -9,6 +9,9 @@ from .forms import CommentForm, PostForm
 
 
 class PostList(generic.ListView):
+    """
+    Generate and populate the list opf posts
+    """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'post_list.html'
@@ -16,7 +19,9 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
-
+    """
+    A view to generate teh detail of the post
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)

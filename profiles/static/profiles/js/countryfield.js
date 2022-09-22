@@ -1,10 +1,10 @@
 let countrySelected = $('#id_default_country').val();
-if(!countrySelected) {
+if (!countrySelected) {
     $('#id_default_country').css('color', 'grey');
 };
-$('#id_default_country').change(function() {
+$('#id_default_country').change(function () {
     countrySelected = $(this).val();
-    if(!countrySelected) {
+    if (!countrySelected) {
         $(this).css('color', 'grey');
     } else {
         $(this).css('color', '#103948');

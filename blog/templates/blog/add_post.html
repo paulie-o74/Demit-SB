@@ -1,57 +1,57 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col-7 col-md-6 my-auto">
+    <div class="container header-container">
+        <div class="row">
+            <div class="col-7 col-md-6 my-auto">
 
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block content %}
-<div class="container mb-2 p-3">
-    <div class="row justify-content-around">
-        <div class="col-12 col-md-6 text-center mt-3">
-            <h2 class="text-navy">Add a new Journal Post</h2>
-            <hr class="w-50 mb-5">
-            <p class="text-navy main-logo-font mb-5">Let everybody know what's going on <span><i class="fas fa-thumbs-up"></i></span>
-            </p>
-            <br>
+    <div class="container mb-2 p-3">
+        <div class="row justify-content-around">
+            <div class="col-12 col-md-6 text-center mt-3">
+                <h2 class="text-navy">Add a new Journal Post</h2>
+                <hr class="w-50 mb-5">
+                <p class="text-navy main-logo-font mb-5">Let everybody know what's going on <span><i
+                            class="fas fa-thumbs-up"></i></span>
+                </p>
+                <br>
+            </div>
         </div>
-    </div>
 
-
-    <div class="row justify-content-around">
-        <div class="col-12 col-md-6">
-            <form class="form text-muted" method="POST" action="{% url 'add_post' %}" enctype="multipart/form-data">
+        <div class="row justify-content-around">
+            <div class="col-12 col-md-6">
+                <form class="form text-muted" method="POST" action="{% url 'add_post' %}" enctype="multipart/form-data">
                     <!-- In this form we need to include the encryption type because if 
-                        you upload images without it then it might night upload correctly -->
-                        {% csrf_token %}
-                        {% for field in form %}
-                            {% if field.name != 'image' %}
-                                {{ field | as_crispy_field }}
-                            {% else %}
-                                {{ field }}
-                            {% endif %}
-                        {% endfor %}
-                <button class="btn-navy form-control rounded-pill border border-navy fixed-button mt-3 mx-auto"
-                    type="submit">Add Post</button>
-                <button onclick="location.href='{% url 'home' %}'" class="btn-navy form-control rounded-pill border border-navy fixed-button my-3 mx-auto"
-                    >Cancel</button>
-            </form>
+                            you upload images without it then it might not upload correctly -->
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <button class="btn-navy form-control rounded-pill border border-navy fixed-button mt-3 mx-auto"
+                        type="submit">Add Post</button>
+                    <button onclick="location.href='{% url 'home' %}'"
+                        class="btn-navy form-control rounded-pill border border-navy fixed-button my-3 mx-auto">Cancel</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
+{{ block.super }}
+    <!-- JS to show a preview of the file name that you will be uploading  -->
     <script type="text/javascript">
-        $('#new-image').change(function() {
+        $('#new-image').change(function () {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);
         });

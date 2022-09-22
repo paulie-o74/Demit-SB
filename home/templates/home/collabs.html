@@ -2,66 +2,69 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col-7 col-md-6 my-auto">
-
+    <div class="container header-container">
+        <div class="row">
+            <div class="col-7 col-md-6 my-auto">
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
-
-
 {% block content %}
-<div class="col col-md-7 col-lg-5 mx-auto">
-    <div id="carouselExampleControls" class="carousel slide container mx-auto my-5 w-100" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="https://www.gap.com/browse/category.do?cid=1189071&style=1191354">
-                <img class="d-block w-100" src="{{ MEDIA_URL }}collab1.webp" alt="Artist collaboration between GAP and Demit"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="text-navy main-logo-font"><mark>GAP X Demit</mark></h5>
+    <div class="col col-md-7 col-lg-5 mx-auto">
+        <div id="carouselExampleControls" class="carousel slide container mx-auto my-5 w-100" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="https://www.gap.com/browse/category.do?cid=1189071&style=1191354">
+                        <img class="d-block w-100" src="{{ MEDIA_URL }}collab1.webp"
+                            alt="Artist collaboration between GAP and Demit"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-navy main-logo-font"><mark>GAP X Demit</mark></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.gapinc.com/en-us/articles/2022/06/gap-expands-nfts-with-demit-omphroy-and-dogami">
+                        <img class="d-block w-100" src="{{ MEDIA_URL }}collab2.webp"
+                            alt="Artist collaboration between GAP and Demit, NFT series"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-navy main-logo-font"><mark>GAP X Demit NFT drop</mark></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.instagram.com/p/CeeJznbrFQ_/?hl=en">
+                        <img class="d-block w-100" src="{{ MEDIA_URL }}collab3.webp"
+                            alt="Artist collaboration between GAP and Demit, T-Shirts"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-navy main-logo-font"><mark>GAP X Demit</mark></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.gap.com/browse/category.do?cid=1189071&style=1191354">
+                        <img class="d-block w-100" src="{{ MEDIA_URL }}collab4.webp"
+                            alt="Artist collaboration between GAP and Demit, Photo shoot"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-navy main-logo-font"><mark>GAP X Demit</mark></h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a
+                        href="https://milled.com/french-connection/just-dropped-the-fcuk-x-demit-collaboration-iUyp1a5j32Ubo0OR">
+                        <img class="d-block w-100" src="{{ MEDIA_URL }}collab5.webp"
+                            alt="Artist collaboration between FCUK and Demit, Hoodies, T-Shirts"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-navy main-logo-font"><mark>FCUK X Demit</mark></h5>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <a href="https://www.gapinc.com/en-us/articles/2022/06/gap-expands-nfts-with-demit-omphroy-and-dogami">
-                <img class="d-block w-100" src="{{ MEDIA_URL }}collab2.webp" alt="Artist collaboration between GAP and Demit, NFT series"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="text-navy main-logo-font"><mark>GAP X Demit NFT drop</mark></h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="https://www.instagram.com/p/CeeJznbrFQ_/?hl=en">
-                <img class="d-block w-100" src="{{ MEDIA_URL }}collab3.webp" alt="Artist collaboration between GAP and Demit, T-Shirts"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="text-navy main-logo-font"><mark>GAP X Demit</mark></h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="https://www.gap.com/browse/category.do?cid=1189071&style=1191354">
-                <img class="d-block w-100" src="{{ MEDIA_URL }}collab4.webp" alt="Artist collaboration between GAP and Demit, Photo shoot"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="text-navy main-logo-font"><mark>GAP X Demit</mark></h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <a href="https://milled.com/french-connection/just-dropped-the-fcuk-x-demit-collaboration-iUyp1a5j32Ubo0OR">
-                <img class="d-block w-100" src="{{ MEDIA_URL }}collab5.webp" alt="Artist collaboration between FCUK and Demit, Hoodies, T-Shirts"></a>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 class="text-navy main-logo-font"><mark>FCUK X Demit</mark></h5>
-                </div>
-            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
     </div>
 
     <div class="container my-5 mx-auto about-section m-1 p-3">
@@ -71,11 +74,10 @@
             then
             make contact via this form to organise a meeting with Demit. <br>
             <button onclick="location.href='{% url 'contact' %}'" type="button"
-            class="hero-button fixed-button form-control rounded-pill my-3">
-            Contact
-        </button>
-            Alternatively you can reach out via social media. 
+                class="hero-button fixed-button form-control rounded-pill my-3">
+                Contact
+            </button>
+            Alternatively you can reach out via social media.
         </p>
-
     </div>
-    {% endblock %}
+{% endblock %}

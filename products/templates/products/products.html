@@ -2,158 +2,158 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
     </div>
-</div>
 {% endblock %}
 
 {% block content %}
-<div class="overlay">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Products</h2>
-                <hr class="w-50 mb-1">
-            </div>
-        </div>
-        <div class="row">
-            <div class="product-container col-sm-12 col-md-10 p-5 mx-auto">
-
-                <div class="row mt-1 mb-2">
-                    <div
-                        class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-
-                        <div class="sort-select-wrapper w-auto border-0 my-3">
-                            <select id="sort-selector"
-                                class="custom-select font-weight-light text-navy border-0 rounded-0 ">
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort
-                                    {{ products|length }} items by...</option>
-                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>
-                                    Price (low to high)</option>
-                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>
-                                    Price (high to low)</option>
-                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
-                                    (A-Z)</option>
-                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>
-                                    Name (Z-A)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 my-auto justify-content-md-start d-flex justify-content-center">
-                        <div class="dropdown my-3 ">
-                            <button class="text-navy dropdown-toggle btn-white-bg border-0 font-weight-light"
-                                type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                Categories
-                            </button>
-                            <div class="dropdown-menu shadow-lg border-0 font-weight-light"
-                                aria-labelledby="dropdowncategoriesmenu">
-                                <a href="{% url 'products' %}?category=original_xl"
-                                    class="dropdown-item font-weight-light text-navy">Original (XL)</a>
-                                <a href="{% url 'products' %}?category=original_large"
-                                    class="dropdown-item font-weight-light text-navy">Original (Large)</a>
-                                <a href="{% url 'products' %}?category=original_medium"
-                                    class="dropdown-item font-weight-light text-navy">Original (Medium)</a>
-                                <a href="{% url 'products' %}?category=original_small"
-                                    class="dropdown-item font-weight-light text-navy">Original (Small)</a>
-                                <a href="{% url 'products' %}?category=print_xl"
-                                    class="dropdown-item font-weight-light text-navy">Print (XL)</a>
-                                <a href="{% url 'products' %}?category=print_large"
-                                    class="dropdown-item font-weight-light text-navy">Print (Large)</a>
-                                <a href="{% url 'products' %}?category=print_medium"
-                                    class="dropdown-item font-weight-light text-navy">Print (Medium)</a>
-                                <a href="{% url 'products' %}?category=small_print"
-                                    class="dropdown-item font-weight-light text-navy">Print (Small)</a>
-                                <a href="{% url 'products' %}?category=misc"
-                                    class="dropdown-item font-weight-light text-navy">Miscellaneous</a>
-                                <a href="{% url 'products' %}?category=gift_card"
-                                    class="dropdown-item font-weight-light text-navy">Gift Cards</a>
-                                <a href="{% url 'products' %}" class="dropdown-item font-weight-light text-red">Reset
-                                    Filters</a>
-                            </div>
-                        </div>
-                    </div>
+    <div class="overlay">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center mt-3">
+                    <h2 class="logo-font">Products</h2>
+                    <hr class="w-50 mb-1">
                 </div>
+            </div>
+            <div class="row">
+                <div class="product-container col-sm-12 col-md-10 p-5 mx-auto">
 
-                <div class="row">
-                    {% for product in products %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card h-100 border-0">
-                            {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img img-fluid p-3 align-middle card-img"
-                                    src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img img-fluid p-3" src="{{ MEDIA_URL }}noimage.png"
-                                    alt="{{ product.name }}">
-                            </a>
-                            {% endif %}
-                            <div class="card-body pb-0">
+                    <div class="row mt-1 mb-2">
+                        <div
+                            class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
 
+                            <div class="sort-select-wrapper w-auto border-0 my-3">
+                                <select id="sort-selector"
+                                    class="custom-select font-weight-light text-navy border-0 rounded-0 ">
+                                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort
+                                        {{ products|length }} items by...</option>
+                                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>
+                                        Price (low to high)</option>
+                                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>
+                                        Price (high to low)</option>
+                                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
+                                        (A-Z)</option>
+                                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>
+                                        Name (Z-A)</option>
+                                </select>
                             </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <h4 class="mb-1 font-weight-light main-logo-font text-navy">{{ product.name }}</h4>
-                                        <p class="lead mb-1 font-weight-light text-navy">${{ product.price }}</p>
-                                        {% if request.user.is_superuser %}
-                                        <small>
-                                            <a class="text-info" href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                            <a class="text-red" href="{% url 'delete_product' product.id %}">Delete</a>
-                                        </small>
-                                    {% endif %}
-                                    </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 my-auto justify-content-md-start d-flex justify-content-center">
+                            <div class="dropdown my-3 ">
+                                <button class="text-navy dropdown-toggle btn-white-bg border-0 font-weight-light"
+                                    type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Categories
+                                </button>
+                                <div class="dropdown-menu shadow-lg border-0 font-weight-light"
+                                    aria-labelledby="dropdowncategoriesmenu">
+                                    <a href="{% url 'products' %}?category=original_xl"
+                                        class="dropdown-item font-weight-light text-navy">Original (XL)</a>
+                                    <a href="{% url 'products' %}?category=original_large"
+                                        class="dropdown-item font-weight-light text-navy">Original (Large)</a>
+                                    <a href="{% url 'products' %}?category=original_medium"
+                                        class="dropdown-item font-weight-light text-navy">Original (Medium)</a>
+                                    <a href="{% url 'products' %}?category=original_small"
+                                        class="dropdown-item font-weight-light text-navy">Original (Small)</a>
+                                    <a href="{% url 'products' %}?category=print_xl"
+                                        class="dropdown-item font-weight-light text-navy">Print (XL)</a>
+                                    <a href="{% url 'products' %}?category=print_large"
+                                        class="dropdown-item font-weight-light text-navy">Print (Large)</a>
+                                    <a href="{% url 'products' %}?category=print_medium"
+                                        class="dropdown-item font-weight-light text-navy">Print (Medium)</a>
+                                    <a href="{% url 'products' %}?category=small_print"
+                                        class="dropdown-item font-weight-light text-navy">Print (Small)</a>
+                                    <a href="{% url 'products' %}?category=misc"
+                                        class="dropdown-item font-weight-light text-navy">Miscellaneous</a>
+                                    <a href="{% url 'products' %}?category=gift_card"
+                                        class="dropdown-item font-weight-light text-navy">Gift Cards</a>
+                                    <a href="{% url 'products' %}" class="dropdown-item font-weight-light text-red">Reset
+                                        Filters</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {% if forloop.counter|divisibleby:1 %}
-                    <div class="col-12 d-sm-none mb-5">
-                        <hr class="d-none">
-                        <hr class="d-none">
+
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                <div class="card h-100 border-0">
+                                    {% if product.image %}
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img img-fluid p-3 align-middle card-img"
+                                            src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img img-fluid p-3" src="{{ MEDIA_URL }}noimage.png"
+                                            alt="{{ product.name }}">
+                                    </a>
+                                    {% endif %}
+                                    <div class="card-body pb-0">
+
+                                    </div>
+                                    <div class="card-footer bg-white pt-0 border-0 text-left">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h4 class="mb-1 font-weight-light main-logo-font text-navy">{{ product.name }}</h4>
+                                                <p class="lead mb-1 font-weight-light text-navy">${{ product.price }}</p>
+                                                {% if request.user.is_superuser %}
+                                                <small>
+                                                    <a class="text-info" href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                    <a class="text-red" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr class="d-none">
+                                <hr class="d-none">
+                            </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr class="d-none">
+                                <hr class="d-none">
+                            </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr class="d-none">
+                                <hr class="d-none">
+                            </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr class="d-none">
+                                <hr class="d-none">
+                            </div>
+                            {% endif %}
+                            {% empty %}
+                            <div class="container mb-5">
+                                <div class="col text-center mt-5">
+                                    <h4 class="text-navy">Your search had 0 results</h4>
+                                    <img src="{{ MEDIA_URL }}sad.webp" alt="sad_girl" class="mx-auto w-50">
+                                    <hr class="w-50 mb-3">
+                                    <button onclick="location.href='{% url 'products' %}'" type="button"
+                                        class="btn-navy form-control rounded-pill border border-navy fixed-button mt-1">
+                                        Continue shopping
+                                    </button>
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:2 %}
-                    <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                        <hr class="d-none">
-                        <hr class="d-none">
-                    </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:3 %}
-                    <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                        <hr class="d-none">
-                        <hr class="d-none">
-                    </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:4 %}
-                    <div class="col-12 d-none d-xl-block mb-5">
-                        <hr class="d-none">
-                        <hr class="d-none">
-                    </div>
-                    {% endif %}
-                    {% empty %}
-                    <div class="container mb-5">
-                        <div class="col text-center mt-5">
-                            <h4 class="text-navy">Your search had 0 results</h4>
-                            <img src="{{ MEDIA_URL }}sad.webp" alt="sad_girl" class="mx-auto w-50">
-                            <hr class="w-50 mb-3">
-                            <button onclick="location.href='{% url 'products' %}'" type="button"
-                                class="btn-navy form-control rounded-pill border border-navy fixed-button mt-1">
-                                Continue shopping
-                            </button>
-                        </div>
-                    </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block postloadjs %}

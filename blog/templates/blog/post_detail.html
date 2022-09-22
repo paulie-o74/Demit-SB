@@ -3,77 +3,76 @@
 
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col-7 col-md-6 my-auto">
-
+    <div class="container header-container">
+        <div class="row">
+            <div class="col-7 col-md-6 my-auto">
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 mx-auto">
-            <div class="card mb-4 text-navy">
-                {% if post.image %}
-                <img class="card-img-top p-3 align-middle" src="{{ post.image.url }}" alt="{{ post.title }}">
-                {% else %}
-                <img class="card-img-top p-3 align-middle" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
-                {% endif %}
-                <div class="card-body">
-                    <h4 class="card-title-index main-logo-font">{% block title %} {{ post.title }} {% endblock title %}
-                    </h4>
-                    <p class="card-text-index text-muted"><small>{{ post.created_on}} </small>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card mb-4 text-navy">
+                    {% if post.image %}
+                        <img class="card-img-top p-3 align-middle" src="{{ post.image.url }}" alt="{{ post.title }}">
+                    {% else %}
+                        <img class="card-img-top p-3 align-middle" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h4 class="card-title-index main-logo-font">{% block title %} {{ post.title }} {% endblock title %}
+                        </h4>
+                        <p class="card-text-index text-muted"><small>{{ post.created_on}} </small>
                             {% if request.user.is_superuser %}
-                            <small><a class="text-info" href="{% url 'edit_post' post.slug %}">| Edit</a> |
-                            <a class="text-red" href="{% url 'delete_post' post.slug %}">Delete</a></small>
-                        
-                        {% endif %}</p>
-                    <p class="card-text-index">{{ post.content | safe }}</p>
+                                <small><a class="text-info" href="{% url 'edit_post' post.slug %}">| Edit</a> |
+                                    <a class="text-red" href="{% url 'delete_post' post.slug %}">Delete</a></small>
+                            {% endif %}
+                        </p>
+                        <p class="card-text-index">{{ post.content | safe }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-8 mx-auto">
-            <div class="card mb-4 text-navy">
-                <div class="card-body">
-                    <!-- comments -->
-                    <h4>Comments: ({{ comments.count }}) </h4>
-                    {% for comment in comments %}
-                        <div class="comments">
-                            <p class="card-text-index text-muted"><small>
-                                    {{ comment.name }} commented on {{ comment.created_on }}
-                                    | {% if request.user.username == comment.name %}
-                                    <a class="text-red" href="{% url 'delete_comment' comment.pk %}">Delete</a>
-                                    {% endif %}
-                                </small>
-                                <br>
-                                {{ comment.body | linebreaks }}</p>
-                            <hr>
-                        </div>
-                    {% endfor %}
-                    {% if commented %}
-                        <div class="text-info" role="alert">
-                            Your comment is awaiting approval, thank you for sharing.
-                        </div>
-                    {% else %}
-                    {% if user.is_authenticated %}
-                        <p class="text-muted">Leave a comment as {{ user.username }}:</p>
-                        <form method="post" style="margin-top: 1.3em;">
-                            {{ comment_form | crispy }}
-                            {% csrf_token %}
-                            <button type="submit"
-                                class="btn-navy form-control rounded-pill fixed-button border-navy my-3">Submit</button>
-                        </form>
-                    {% else %}
-                        <p class="card-text-index"><a href="{% url 'account_login' %}" class="text-info">Log in</a> or <a
-                                href="{% url 'account_signup' %}" class="text-info">Sign up</a> to leave a comment.</p>
-                    {% endif %}
-                    {% endif %}
+            <div class="col-md-8 mx-auto">
+                <div class="card mb-4 text-navy">
+                    <div class="card-body">
+                        <!-- comments -->
+                        <h4>Comments: ({{ comments.count }}) </h4>
+                        {% for comment in comments %}
+                            <div class="comments">
+                                <p class="card-text-index text-muted"><small>
+                                        {{ comment.name }} commented on {{ comment.created_on }}
+                                        | {% if request.user.username == comment.name %}
+                                        <a class="text-red" href="{% url 'delete_comment' comment.pk %}">Delete</a>
+                                        {% endif %}
+                                    </small>
+                                    <br>
+                                    {{ comment.body | linebreaks }}</p>
+                                <hr>
+                            </div>
+                        {% endfor %}
+                        {% if commented %}
+                            <div class="text-info" role="alert">
+                                Your comment is awaiting approval, thank you for sharing.
+                            </div>
+                        {% else %}
+                            {% if user.is_authenticated %}
+                                <p class="text-muted">Leave a comment as {{ user.username }}:</p>
+                                <form method="post" style="margin-top: 1.3em;">
+                                    {{ comment_form | crispy }}
+                                    {% csrf_token %}
+                                    <button type="submit"
+                                        class="btn-navy form-control rounded-pill fixed-button border-navy my-3">Submit</button>
+                                </form>
+                            {% else %}
+                                <p class="card-text-index"><a href="{% url 'account_login' %}" class="text-info">Log in</a> or <a
+                                        href="{% url 'account_signup' %}" class="text-info">Sign up</a> to leave a comment.</p>
+                            {% endif %}
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}

@@ -3,6 +3,9 @@ from .models import Post, Comment
 
 
 class PostAdmin(admin.ModelAdmin):
+    """
+    Post admin
+    """
     list_display = ('title', 'slug', 'status', 'created_on')
     list_filter = ("status",)
     search_fields = ['title', 'content']
@@ -14,6 +17,9 @@ admin.site.register(Post, PostAdmin)
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
+    """
+    Comment admin
+    """
     list_display = ('name', 'body', 'post', 'created_on', 'active')
     list_filter = ('active', 'created_on')
     search_fields = ('name', 'email', 'body')

@@ -1,74 +1,70 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col-7 col-md-6 my-auto">
-
+    <div class="container header-container">
+        <div class="row">
+            <div class="col-7 col-md-6 my-auto">
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block content %}
-<div class="container mb-2 p-3">
-    <div class="row justify-content-around">
-        <div class="col-12 col-md-6 text-center mt-3">
-            <h2 class="text-navy">My Journal</h2>
-            <hr class="w-50 mb-5">
-            <p class="text-navy main-logo-font mb-5">Keep up to date on recent or upcoming shows/projects, all feedback welcome <span><i class="fas fa-thumbs-up"></i></span>
-            </p>
-            <br>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-md-8 mt-3 mx-auto">
-            {% for post in post_list %}
-            <div class="card mb-4 text-navy">
-                {% if post.image %}
-                <a href="{% url 'post_detail' post.slug  %}">
-                    <img class="card-img-top p-3 align-middle"
-                        src="{{ post.image.url }}" alt="{{ post.title }}">
-                </a>
-                {% else %}
-                <a href="{% url 'post_detail' post.slug  %}">
-                    <img class="card-img-top p-3 align-middle" src="{{ MEDIA_URL }}noimage.png"
-                        alt="{{ post.title }}">
-                </a>
-                {% endif %}
-                <div class="card-body">
-                    <h4 class="card-title-index main-logo-font">{{ post.title }}</h4>
-                    <p class="card-text-index text-muted"><small>{{ post.author }} | {{ post.created_on}}</small></p>
-                    <p class="card-text-index">{{post.content|slice:":200" }} ...<a href="{% url 'post_detail' post.slug  %}" class="text-info"> continue reading &rarr;</a></p>
-                    {% if request.user.is_superuser %}
-                    <small>
-                        <a class="text-info" href="{% url 'edit_post' post.slug %}">Edit</a> | 
-                        <a class="text-red" href="{% url 'delete_post' post.slug %}">Delete</a>
-                    </small>
-                {% endif %}
-                </div>
+    <div class="container mb-2 p-3">
+        <div class="row justify-content-around">
+            <div class="col-12 col-md-6 text-center mt-3">
+                <h2 class="text-navy">My Journal</h2>
+                <hr class="w-50 mb-5">
+                <p class="text-navy main-logo-font mb-5">Keep up to date on recent or upcoming shows/projects, all feedback
+                    welcome <span><i class="fas fa-thumbs-up"></i></span>
+                </p>
+                <br>
             </div>
-            {% endfor %}
         </div>
     </div>
-</div>
+    <div class="container">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8 mt-3 mx-auto">
+                {% for post in post_list %}
+                    <div class="card mb-4 text-navy">
+                        {% if post.image %}
+                            <a href="{% url 'post_detail' post.slug  %}">
+                                <img class="card-img-top p-3 align-middle" src="{{ post.image.url }}" alt="{{ post.title }}">
+                            </a>
+                        {% else %}
+                            <a href="{% url 'post_detail' post.slug  %}">
+                                <img class="card-img-top p-3 align-middle" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+                            </a>
+                        {% endif %}
+                        <div class="card-body">
+                            <h4 class="card-title-index main-logo-font">{{ post.title }}</h4>
+                            <p class="card-text-index text-muted"><small>{{ post.author }} | {{ post.created_on}}</small></p>
+                            <p class="card-text-index">{{post.content|slice:":200" }} ...<a
+                                    href="{% url 'post_detail' post.slug  %}" class="text-info"> continue reading &rarr;</a></p>
+                            {% if request.user.is_superuser %}
+                                <small>
+                                    <a class="text-info" href="{% url 'edit_post' post.slug %}">Edit</a> |
+                                    <a class="text-red" href="{% url 'delete_post' post.slug %}">Delete</a>
+                                </small>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% if is_paginated %}
-  <nav aria-label="Page navigation conatiner"></nav>
-  <ul class="pagination justify-content-center">
-    {% if page_obj.has_previous %}
-    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-    {% endif %}
-    {% if page_obj.has_next %}
-    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-    {% endif %}
-  </ul>
-  </nav>
-</div>
+        <nav aria-label="Page navigation conatiner">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                {% endif %}
+            </ul>
+        </nav>
 {% endif %}
 {% endblock %}

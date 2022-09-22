@@ -1,5 +1,6 @@
 .order-history {
-    max-height: 616px; /* Height of profile form & submit button */
+    max-height: 616px;
+    /* Height of profile form & submit button */
     overflow-y: auto;
 }
 
@@ -19,4 +20,3 @@
 #id_default_country option:first-child {
     color: grey;
 }
-

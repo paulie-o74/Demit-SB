@@ -19,7 +19,7 @@
 
     // Ensure proper enabling/disabling of all inputs on page load
     var allQtyInputs = $('.qty_input');
-    for(var i = 0; i < allQtyInputs.length; i++) {
+    for (var i = 0; i < allQtyInputs.length; i++) {
         var itemId = $(allQtyInputs[i]).data('item_id');
         var itemCategory = $(allQtyInputs[i]).data('item_category');
         console.log(`Page load Cat: ${itemCategory}`);
@@ -29,7 +29,6 @@
             handleEnableDisable(itemId);
         }
     }
-
 
     // Check enable/disable every time the input is changed
     $('.qty_input').change(function () {
