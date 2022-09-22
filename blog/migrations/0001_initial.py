@@ -51,10 +51,7 @@ class Migration(migrations.Migration):
                 ('body', models.TextField()),
                 ('created_on', models.DateTimeField(auto_now_add=True)),
                 ('active', models.BooleanField(default=False)),
-                ('post', models.ForeignKey(on_delete=
-                                           django.db.models.deletion.CASCADE,
-                                           related_name='comments',
-                                           to='blog.post')),
+                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='blog.post')),
             ],
             options={
                 'ordering': ['created_on'],

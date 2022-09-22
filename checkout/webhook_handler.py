@@ -113,7 +113,8 @@ class StripeWH_Handler:
             order = None
             try:
                 order = Order.objects.create(
-                    # Using the split method to align the form with stripe payment
+                    # Using the split method to align
+                    # the form with stripe payment
                     first_name=shipping_details.name.split()[0],
                     second_name=shipping_details.name.split()[1],
                     user_profile=profile,

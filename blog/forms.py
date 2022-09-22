@@ -39,15 +39,9 @@ class PostForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        Add classes to form
         """
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'title': 'Journal entry title',
-            'content': 'Main content',
-            'status': 'Status',
-        }
 
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'add-product-form\

@@ -30,5 +30,6 @@ class ContactForm(forms.ModelForm):
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'add-product-form border-navy text-navy'
+            self.fields[field].widget.attrs['class'] = 'add-product-form \
+                                                        border-navy text-navy'
             self.fields[field].label = False
