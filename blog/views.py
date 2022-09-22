@@ -45,7 +45,8 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, 'Your comment is awaiting approval, thank you for sharing.')
+            messages.success(request, 'Your comment is awaiting approval, \
+                             thank you for sharing.')
         else:
             comment_form = CommentForm()
 
@@ -76,7 +77,8 @@ def add_post(request):
             messages.success(request, 'Successfully added post!')
             return redirect(reverse('post_detail', args=[post.slug]))
         else:
-            messages.error(request, 'Failed to add post. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add post. \
+                           Please ensure the form is valid.')
     else:
         form = PostForm()
 
@@ -105,7 +107,8 @@ def edit_post(request, slug):
             messages.success(request, 'Successfully updated post!')
             return redirect(reverse('post_detail', args=[post.slug]))
         else:
-            messages.error(request, 'Failed to update post. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update post. \
+                Please ensure the form is valid.')
     else:
         form = PostForm(instance=post)
 

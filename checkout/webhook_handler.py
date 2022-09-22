@@ -81,7 +81,8 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 order = Order.objects.get(
-                    # Using the split method to align the form with stripe payment
+                    # Using the split method to align the
+                    # form with stripe payment
                     first_name__istartswith=shipping_details.name.split()[0],
                     second_name__icontains=shipping_details.name.split()[1],
                     email__iexact=billing_details.email,
@@ -99,8 +100,7 @@ class StripeWH_Handler:
                 order_exists = True
                 break
                 return HttpResponse(
-                    content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
-                    status=200)
+                    content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database', status=200)
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)

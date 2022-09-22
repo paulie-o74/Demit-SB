@@ -3,7 +3,6 @@ from .models import Comment, Post
 from .widgets import CustomClearableFileInput
 
 
-
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
@@ -25,7 +24,8 @@ class CommentForm(forms.ModelForm):
             else:
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'add-product-form border-navy text-navy'
+            self.fields[field].widget.attrs['class'] = 'add-product-form\
+                 border-navy text-navy'
             self.fields[field].label = False
 
 
@@ -34,8 +34,8 @@ class PostForm(forms.ModelForm):
         model = Post
         exclude = ('author', 'slug',)
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
-
+    image = forms.ImageField(label='Image', required=False,
+                             widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         """
@@ -50,4 +50,5 @@ class PostForm(forms.ModelForm):
         }
 
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'add-product-form border-navy text-navy'
+            field.widget.attrs['class'] = 'add-product-form\
+                 border-navy text-navy'
