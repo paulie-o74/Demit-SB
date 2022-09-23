@@ -30,10 +30,7 @@ class Migration(migrations.Migration):
                                                     .utils.timezone.now)),
                 ('status', models.IntegerField(choices=[(0, 'Draft'),
                  (1, 'Publish')], default=0)),
-                ('author', models.ForeignKey(on_delete=django.db.models.
-                                             deletion.CASCADE,
-                                             related_name='blog_posts',
-                                             to=settings.AUTH_USER_MODEL)),
+                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='blog_posts', to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'ordering': ['-created_on'],
