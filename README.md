@@ -1,6 +1,7 @@
 <h1 align="center">Demit's Arthouse</h1>
+(Developer: Paul Thomas O'Riordan)
 
-<img src="media/">
+Format: ![Am I responsive](/media/readme_images/amiresponsive.png)
 
 ### **Live Site**
 [Demit Art Site](https://demit-sb.herokuapp.com/)
@@ -67,6 +68,10 @@ The checkout app is used for the user to make purchases. This app contains two m
 * Footer is fixed on the bottom with links to social media and newsletter subscription.
 
 ### Skeleton <a name="wireframes"></a>
+
+## UI/UX
+
+Design inspiration came from various google searches for arthouses and art websites as well as https://www.shopify.com/ templates.
 
 The project was developed from initial wireframes by hand and then these were expanded digitally.
 Each subsequent page after the home page has the same structure to ensure uniformity accross the site.
@@ -191,6 +196,7 @@ Click to see wireframes:
    - Add link to footer
 
   * Sprint 4 - 01/09/2022 - 11/09/2022 (finished 11/09/2022)
+
     + Add Profile app
     - Set up Models
     - Set up admin
@@ -202,8 +208,8 @@ Click to see wireframes:
     + Add Toasts
     - Set up notifications with toasts
 
+* Sprint 5 - 11/09/2022 - 24/09/2022 (Finished on 24/09/2022)
 
-* Sprint 6 - 11/09/2022 - 24/09/2022 (Finished on 24/09/2022)
   + Add Facebook Business link
     - Create FB busness page
     - Add link in footer (not to deployed site but will be once deployed)
@@ -401,7 +407,7 @@ The chosen fonts were Gloria Hallelujah for the logo and titles and Raleway for 
 * [Google Fonts](https://fonts.google.com/)
 	* Google fonts are used in the project to import the fonts for the site.
 * [GitHub](https://github.com/)
-	* GithHub is the hosting site used to store the source code for the Website.
+	* GithHub is the hosting site used to store the source code for the Website, as well as github projects to manage the planning and implementation of all functionality using a kanban board. 
 * [Gitpod](https://gitpod.io/)
 	* Gitpod is used as version control software to commit and push code to the GitHub repository where the source code is stored.
 * [AWS S3 Buckets](https://aws.amazon.com/s3/)
@@ -414,8 +420,8 @@ The chosen fonts were Gloria Hallelujah for the logo and titles and Raleway for 
     * All the Icons displayed throughout the website are Font Awesome icons.
 * [Favicon](https://favicon.io/)
     * Favicon.io was used to make the site favicon 
-<!-- * [Am I Responsive](http://ami.responsivedesign.is/#)
-    * Multi Device Website Mockup Generator was used to create the Mock up image in this README -->
+* [Am I Responsive](http://ami.responsivedesign.is/#)
+    * Multi Device Website Mockup Generator was used to create the Mock up image in this README
 
 ## Testing <a name="testing"></a>
 
@@ -531,7 +537,7 @@ You will need to install all of the packages listed in the requirements file you
 * Images - Some images used are taken from google images. Other product images were taken from https://www.fleurshop.co/ with permssion from the artist himself.
 
 ### Acknowledgments
-My mentor Spence for his advice and guidance.
-Code Institutes Tutor support for their help and guidance.
-My wife Ashley for her unwaivering support and advice.
-Students of Code Institute on slack that helped with certain bugs.
+* My mentor Spence for his advice and guidance.
+* Code Institutes Tutor support for their help and guidance.
+* My wife Ashley for her unwaivering support and advice.
+* Students of Code Institute on slack that helped with certain bugs.
