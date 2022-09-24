@@ -1,7 +1,7 @@
 <h1 align="center">Demit's Arthouse</h1>
-(Developer: Paul Thomas O'Riordan)
 
-Format: ![Am I responsive](/media/readme_images/amiresponsive.png)
+
+![Am I responsive](/media/readme_images/amiresponsive.png)
 
 ### **Live Site**
 [Demit Art Site](https://demit-sb.herokuapp.com/)
