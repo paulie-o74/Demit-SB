@@ -29,7 +29,7 @@ def contact(request):
                 return HttpResponse('Invalid header found.')
             contact_form.save()
             messages.success(request,
-                             ('Message received!'
+                             ('Message received! '
                               'We will be in contact with you soon. '
                               'Thanks for reaching out.'))
             return redirect(reverse('contact'))

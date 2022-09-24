@@ -242,20 +242,6 @@ input[type=number] {
     color: #C13584;
 }
 
-/* -------------------------------- Navbar Styling */
-
-#navbar1 {
-    background-color: white;
-    color: #103948;
-    position: fixed;
-    z-index: +15;
-    /* Make it stick/fixed */
-    top: 0;
-    /* Stay on top */
-    transition: top 0.5s;
-    /* Transition effect when sliding down (and up) */
-}
-
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -347,12 +333,23 @@ footer {
     }
 }
 
-/* fixed top navbar only on medium and up  */
 @media (min-width: 992px) {
     .hover-underline-animation {
         display: inline-block;
         position: relative;
         color: #103948BF;
+    }
+
+    #navbar1 {
+        background-color: white;
+        color: #103948;
+        position: fixed;
+        z-index: +15;
+        /* Make it stick/fixed */
+        top: 0;
+        /* Stay on top */
+        transition: top 0.5s;
+        /* Transition effect when sliding down (and up) */
     }
 
     .hover-underline-animation:after {
@@ -421,6 +418,8 @@ footer {
     .newsletter-container {
         padding-top: 24px;
     }
+
+
 }
 
 @media (max-width: 413px) {

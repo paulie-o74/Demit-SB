@@ -66,8 +66,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-X_FRAME_OPTIONS = 'ALLOW-FROM <https://ui.dev/amiresponsive>'
-
 ROOT_URLCONF = 'demit.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

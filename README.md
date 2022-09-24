@@ -3,11 +3,14 @@
 
 ![Am I responsive](/media/readme_images/amiresponsive.png)
 
-### **Live Site**
+### **Live Site:**
 [Demit Art Site](https://demit-sb.herokuapp.com/)
 
 ### **Repository:**
 [Demit Art Repository](https://github.com/rashdogg74/Demit-SB)
+
+### **Developer:**
+Paul Thomas O'Riordan
 
 # About
 This is a full-stack e-commerce project built using Django, Python, HTML, CSS, and JavaScript. I have created this website for 'Demit', a real artist, based in NYC. It is a business that sells prints, one of one paintings on canvas as well as a contact point for commissioned pieces, murals and brand collaboration. The web application also doubles as a blog which allows fans to follow his work, keep up to date with recent shows and comment on recent work.
@@ -67,9 +70,9 @@ The checkout app is used for the user to make purchases. This app contains two m
 * Navbar is auto-hidden and shown on scroll up on top to facilitate users easily navigating through pages. Mobile navigation is the same on all pages to ensure easy navigation.
 * Footer is fixed on the bottom with links to social media and newsletter subscription.
 
-### Skeleton <a name="wireframes"></a>
+## Skeleton <a name="wireframes"></a>
 
-## UI/UX
+### UI/UX
 
 Design inspiration came from various google searches for arthouses and art websites as well as https://www.shopify.com/ templates.
 
@@ -361,6 +364,16 @@ The chosen fonts were Gloria Hallelujah for the logo and titles and Raleway for 
 * Ability to checkout and receive confirmation of purchase.
 * Admin creation and management of products.
 
+### Bugs
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| Original plan was to use up and downvote functionality and subsequently order posts by that.| As my level of ajax is not up to a sufficient level I removed this funcitonality for this version of the project and added just an upvote button. |
+| Footer was not sticking to the bottom of the page | Use 100% vh |
+| Success messages not displaying  | Add javascript code at the bottom of base html page |
+| Close to final deployment the database was comprimised because I tried to hard revert to an old commit, my tutors I and tried to debug, remove migrations etc but to no avail | Restart project in new repository and add everything again.. |
+| I tried to include summernote in the html via an import but my tutor nor I could debug so that was removed and may be included in a later version | Due to time constraints this was not possible for this version of the product. |
+| No redirect after creating a new profile | Added explicit redirect to settings after researching allauth documentation |
+
 ### Future Features
 * Allow for admin to create discount codes and manage on site.
 * Allow for the use of social sign ins.
@@ -490,7 +503,7 @@ Heroku needs to know which technologies are being used and any requirements, so 
   * ```pip3 install psycopg2-binary```
   make sure to add these to the requirements file using ```pip3 freeze > requirements.txt``` 
 
-## Set up Emails
+### Set up Emails
 
 ## I used Gmail for the email on the contact page. Others can be used but will need a few changes**
 
@@ -532,9 +545,13 @@ You will need to install all of the packages listed in the requirements file you
 
 ### Code
 * The project is broadly based on the Boutique Ado project by the Code Institute and was used as a basse for my project (https://github.com/Code-Institute-Solutions/boutique_ado_v1/)
+* The hover underline animation was built using references from (https://www.30secondsofcode.org/css/s/hover-underline-animation)
+* The navbar was built using references from (https://www.w3schools.com/css/css_navbar.asp)
+* The card hover effects were built using references from (https://codingyaar.com/bootstrap-card-hover-effect-zoom/)
+* The footer was built using references from (https://mdbootstrap.com/docs/standard/navigation/footer/)
 
 ### Media
-* Images - Some images used are taken from google images. Other product images were taken from https://www.fleurshop.co/ with permssion from the artist himself.
+* Images - One image used is taken from google images. All other images were taken from https://www.fleurshop.co/ with permssion from the artist himself.
 
 ### Acknowledgments
 * My mentor Spence for his advice and guidance.
