@@ -24,6 +24,7 @@ This is a full-stack e-commerce project built using Django, Python, HTML, CSS, a
 + [Agile Methodologies](#agile)
 + [Features](#features)
 + [Marketing](#marketing)
++ [Bugs](#bugs)
 + [Technologies Used](#tech)
 + [Testing](#testing)
 + [Deployment](#deployment)
@@ -231,39 +232,7 @@ Click to see wireframes:
 
 + This online store offers products/services to the final customer as well as services to businesses and to brands. The five main art business models are tailored to in the one web app (Direct to customer original works, Gallary sales, prints, commissions, licensing).
 
-## Marketing <a name="marketing"></a>
-
-+ Due to the sector this site will rely heavily on an Instagram Page with a link on the page footer. It can be viewed here:
-[Instagram Page](https://www.instagram.com/bouquet/)
-[Facebook Page Images](media/readme_images/instagram%20page.png)
-
-+ This site has a Facebook Business Page with a link on the page footer. It can be viewed here:
-[Facebook Page](https://www.facebook.com/)
-[Facebook Page Images](media/readme_images/facebook%20page.png)
-
-+ Users can subscribe to our newsletter to receive all offers in their email box. Subscription links are available on the footer on all pages. 
-
-+ Upon registering, the user is shown a message confirming their subscription. The site owner can now see the new subscriber on their audience dashboard, and new campaigns will be sent to them too.
-
-+ I have searched similar websites and googled key words to apply to the site for SEO purposes:
-
-- I have used the meta description and keywords to improve the SEO
-
-* There are no sponsored or paid links on this site.
-
-* Colours
-
-The Colour scheme was generated using the eyedropper plugin to get one colour from the logo image and [colours](https://coolors.co/) to create the colour palette.
-
-[View Pallet Here](media/readme_images/pallette.png)
-
-* Font Selection
- 
-Two complimentary fonts were chosen with [Google Fonts](https://fonts.google.com/) to be used across the website.
-
-The chosen fonts were Gloria Hallelujah for the logo and titles and Raleway for everything else on the site.
-
-### Features planned
+### Features <a name="features"></a>
 * Responsive design.
 * Website title and information on the site's purpose.
 * Navigation Menu (Site Wide).
@@ -273,13 +242,14 @@ The chosen fonts were Gloria Hallelujah for the logo and titles and Raleway for 
 * Logout functionality.
 * Ability to view all products.
 * Ability to view product details.
-* Ability to add and remove product to a favourites.
 * Ability to add and remove product to the bag to purchase.
 * Ability to Update quantity of or remove items in bag.
 * Ability to review a product.
 * Ability to sign up to a newsletter.
 * Ability to view a site policy.
 * Ability to contact the site owners.
+* Ability to follow the site owners built in blog "journal"
+* Ability to comment on blog posts and delete comments
 * Ability to checkout and receive confirmation of purchase.
 * Admin creation and management of products.
 
@@ -344,41 +314,62 @@ The chosen fonts were Gloria Hallelujah for the logo and titles and Raleway for 
 |:--------------------  |--------------- |--------------- |
 |Logout functionality   |       1        |       5        |
 
-
-### Existing Features
-* Website title and information on the site purpose.
-* Navigation Menu (Site Wide).
-* Postgress databases to store information and user login/profile information.
-* CRUD Functionality
-* Login functionality.
-* Logout functionality.
-* Ability to view all products.
-* Ability to view product details.
-* Ability to add and remove product to a favourites.
-* Ability to add and remove product to the bag to purchase.
-* Ability to Update quantity of or remove items in bag.
-* Ability to review a product.
-* Ability to sign up to a newsletter.
-* Ability to view a site policy.
-* Ability to contact the site owners.
-* Ability to checkout and receive confirmation of purchase.
-* Admin creation and management of products.
-
-### Bugs
-| **Bug** | **Fix** |
-| ----------- | ----------- |
-| Original plan was to use up and downvote functionality and subsequently order posts by that.| As my level of ajax is not up to a sufficient level I removed this funcitonality for this version of the project and added just an upvote button. |
-| Footer was not sticking to the bottom of the page | Use 100% vh |
-| Success messages not displaying  | Add javascript code at the bottom of base html page |
-| Close to final deployment the database was comprimised because I tried to hard revert to an old commit, my tutors I and tried to debug, remove migrations etc but to no avail | Restart project in new repository and add everything again.. |
-| I tried to include summernote in the html via an import but my tutor nor I could debug so that was removed and may be included in a later version | Due to time constraints this was not possible for this version of the product. |
-| No redirect after creating a new profile | Added explicit redirect to settings after researching allauth documentation |
-
 ### Future Features
+As this is an educational project, it will not be maintained in the future. However, if it were a live site, some features that I would like to implement are listed below.
 * Allow for admin to create discount codes and manage on site.
 * Allow for the use of social sign ins.
 * Allow users to edit their comment on a journal post.
+* Stock control.
+* Better form validation.
+* User permissions / groups to allow staff to have non-breaking access to the CMS.
+* Link up user profiles and subscription list.
+* Further improve user experience.
 * Add a FAQs section.
+
+## Marketing <a name="marketing"></a>
+
++ Due to the sector this site will rely heavily on an Instagram Page with a link on the page footer. It can be viewed here:
+[Instagram Page](https://www.instagram.com/bouquet/)
+[Facebook Page Images](media/readme_images/instagram%20page.png)
+
++ This site has a Facebook Business Page with a link on the page footer. It can be viewed here:
+[Facebook Page](https://www.facebook.com/)
+[Facebook Page Images](media/readme_images/facebook%20page.png)
+
++ Users can subscribe to our newsletter to receive all offers in their email box. Subscription links are available on the footer on all pages. 
+
++ Upon registering, the user is shown a message confirming their subscription. The site owner can now see the new subscriber on their audience dashboard, and new campaigns will be sent to them too.
+
++ I have searched similar websites and googled key words to apply to the site for SEO purposes:
+
+- I have used the meta description and keywords to improve the SEO
+
+* There are no sponsored or paid links on this site.
+
+* Colours
+
+The Colour scheme was generated using the eyedropper plugin to get one colour from the logo image and [colours](https://coolors.co/) to create the colour palette.
+
+[View Pallet Here](media/readme_images/pallette.png)
+
+* Font Selection
+ 
+Two complimentary fonts were chosen with [Google Fonts](https://fonts.google.com/) to be used across the website.
+
+The chosen fonts were Gloria Hallelujah for the logo and titles and Raleway for everything else on the site.
+
+
+## Bugs <a name="bugs"></a>
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| .| . |
+|  |  |
+|   |  |
+|  |  |
+|  |  |
+|  |  |
+
 
 ## Technologies Used <a name="tech"></a>
 
@@ -547,6 +538,7 @@ You will need to install all of the packages listed in the requirements file you
 * The project is broadly based on the Boutique Ado project by the Code Institute and was used as a basse for my project (https://github.com/Code-Institute-Solutions/boutique_ado_v1/)
 * The hover underline animation was built using references from (https://www.30secondsofcode.org/css/s/hover-underline-animation)
 * The navbar was built using references from (https://www.w3schools.com/css/css_navbar.asp)
+* The blog was built using references from (https://djangocentral.com/building-a-blog-application-with-django/)
 * The card hover effects were built using references from (https://codingyaar.com/bootstrap-card-hover-effect-zoom/)
 * The footer was built using references from (https://mdbootstrap.com/docs/standard/navigation/footer/)
 
