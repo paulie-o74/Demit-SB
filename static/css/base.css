@@ -153,6 +153,10 @@ input[type=number] {
     font-family: 'Gloria Hallelujah', cursive;
 }
 
+.main-logo-font-size {
+    font-size: 1.375em;
+}
+
 .logo-font {
     text-transform: uppercase;
 }

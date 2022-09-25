@@ -21,39 +21,7 @@
 
 [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance of the website. There are a couple of issues due to Bootstrap, Stripe and general Heroku slowness.
 
-<details><summary>Home</summary>
-<img src="">
-</details>
-<details><summary>Register</summary>
-<img src="/">
-</details>
-<details><summary>Products</summary>
-<img src="/">
-</details>
-<details><summary>Product Detail</summary>
-<img src="/">
-</details>
-<details><summary>Producers</summary>
-<img src="/">
-</details>
-<details><summary>Profile</summary>
-<img src="">
-</details>
-<details><summary>Bag</summary>
-<img src="">
-</details>
-<details><summary>Checkout</summary>
-<img src="/">
-</details>
-<details><summary>Order Confirmation</summary>
-<img src="">
-</details>
-<details><summary>Privacy Policy</summary>
-<img src="">
-</details>
-<details><summary>Terms & Conditions</summary>
-<img src="">
-</details>
+![CSS validation](/media/readme_images/llighthouse.png)
 
 *Go back to the [top](#table-of-contents)*
 
@@ -63,41 +31,7 @@
 
 ## Accessibility Validation
 
-The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) was used to ensure the website met high accessibility standards. All pages pass with 0 errors, except for the checkout page that has a contrast error. This is only for placeholder text.
-
-<details><summary>Home</summary>
-<img src="">
-</details>
-<details><summary>Register</summary>
-<img src="">
-</details>
-<details><summary>Products</summary>
-<img src="">
-</details>
-<details><summary>Product Detail</summary>
-<img src="">
-</details>
-<details><summary>Producers</summary>
-<img src="">
-</details>
-<details><summary>Profile</summary>
-<img src="">
-</details>
-<details><summary>Bag</summary>
-<img src="">
-</details>
-<details><summary>Checkout</summary>
-<img src="">
-</details>
-<details><summary>Order Confirmation</summary>
-<img src="">
-</details>
-<details><summary>Privacy Policy</summary>
-<img src="">
-</details>
-<details><summary>Terms & Conditions</summary>
-<img src="">
-</details>
+The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) was used to ensure the website met high accessibility standards. All pages pass with 1-2 errors due to the bootstrap navbar and 1-2 warnings due to style preferences.
 
 *Go back to the [top](#table-of-contents)*
 
@@ -107,41 +41,7 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) wa
 
 ## HTML Validation
 
-The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website. For logged in pages, the page source was copied and pasted into the validator. All pages pass with 0 errors and 0 warnings. Except for the profile and checkout pages, which have an error due to a placeholder attribute in a select element. This looks to be coming from the `CountryField` class from `django-countries`.
-
-<details><summary>Home</summary>
-<img src="">
-</details>
-<details><summary>Register</summary>
-<img src="">
-</details>
-<details><summary>Products</summary>
-<img src="">
-</details>
-<details><summary>Product Detail</summary>
-<img src="">
-</details>
-<details><summary>Producers</summary>
-<img src="">
-</details>
-<details><summary>Profile</summary>
-<img src="">
-</details>
-<details><summary>Bag</summary>
-<img src="">
-</details>
-<details><summary>Checkout</summary>
-<img src="">
-</details>
-<details><summary>Order Confirmation</summary>
-<img src="">
-</details>
-<details><summary>Privacy Policy</summary>
-<img src="">
-</details>
-<details><summary>Terms & Conditions</summary>
-<img src="">
-</details>
+The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website. For logged in pages, the page source was copied and pasted into the validator. All pages pass
 
 *Go back to the [top](#table-of-contents)*
 
