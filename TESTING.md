@@ -151,7 +151,8 @@ The [W3C Markup Validation Service](https://validator.w3.org/) was used to valid
 
 The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the website. The CSS passes with 0 errors.
 
-![CSS validation]()
+![CSS validation](/media/readme_images/css1.png)
+![CSS validation](/media/readme_images/css2.png)
 
 *Go back to the [top](#table-of-contents)*
 
@@ -161,21 +162,6 @@ The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) wa
 
 [JSHint](https://jshint.com/) was used to validate the JavaScript/Jquery of the website. No issues were found.
 
-<details><summary>Base JS</summary>
-<img src="">
-</details>
-<details><summary>Quantity handler</summary>
-<img src="">
-</details>
-<details><summary>Delete modal handler</summary>
-<img src="">
-</details>
-<details><summary>Stripe handler</summary>
-<img src="">
-</details>
-<details><summary>Country field handler</summary>
-<img src="">
-</details>
 
 *Go back to the [top](#table-of-contents)*
 
@@ -183,14 +169,7 @@ The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) wa
 
 ## PEP8 Validation
 
-A combination of the following Python packages was used to ensure the code is PEP8 compliant: flake8, autopep8 and black. After which `flake8 --statistics` was ran in VSCode terminal and the final flagged files were checked in [PEP8 Online](http://pep8online.com). The only issues found were a few longer lines in the base project's settings.py and checkout's forms.py due to HTML blocks, shown below.
-
-<details><summary>settings.py</summary>
-<img src="">
-</details>
-<details><summary>checkout/forms.py</summary>
-<img src="">
-</details>
+A combination of the following Python packages was used to ensure the code is PEP8 compliant: flake8, autopep8 and black. After which `flake8 --statistics` was ran in VSCode terminal and the final flagged files were checked in [PEP8 Online](http://pep8online.com). The only issues found were a few longer lines in the base project's settings.py and migrations files due to HTML blocks.
 
 *Go back to the [top](#table-of-contents)*
 

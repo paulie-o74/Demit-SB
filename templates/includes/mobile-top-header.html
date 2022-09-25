@@ -7,11 +7,12 @@
     <div class="dropdown-menu shadow-lg border-0 mobile-search" aria-labelledby="mobile-search">
         <form class="form p-1" method="GET" action="{% url 'products' %}">
             <div class="input-group mx-auto p-2">
+                <label for="search" class="d-none"></label>
                 <input class="form-control border border-navy rounded-pill" type="text" name="q" placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome">
                 <div class="input-group-append">
                     <button class="d-none" type="submit">
                         <span class="icon">
-                            <i class="fas fa-search"></i>
+                            <i class="fas fa-search">search</i>
                         </span>
                     </button>
                 </div>

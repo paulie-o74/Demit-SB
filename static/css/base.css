@@ -129,10 +129,6 @@ input[type=number] {
     height: auto;
 }
 
-.p-3 {
-    padding: $spacer !important;
-}
-
 .quantity-update {
     width: 220px;
 }
