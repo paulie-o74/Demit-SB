@@ -275,10 +275,6 @@ Click to see wireframes:
 |:--------------------  |--------------- |--------------- |
 |Ability to add and     |       2        |       5        |
 |remove a product from  |                |                |
-|favourites.            |                |                |
-|:--------------------  |--------------- |--------------- |
-|Ability to add and     |       2        |       5        |
-|remove a product from  |                |                |
 |the bag to purchase.   |                |                |
 |:--------------------  |--------------- |--------------- |
 |Ability to update the  |       3        |       5        |

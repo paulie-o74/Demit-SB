@@ -31,7 +31,12 @@
 
 ## Accessibility Validation
 
-The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) was used to ensure the website met high accessibility standards. All pages pass with 1-2 errors due to the bootstrap navbar and 1-2 warnings due to style preferences.
+The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) was used to ensure the website met high accessibility standards. All pages pass with some errors due to the bootstrap navbar and 1-2 warnings due to style preferences detailed below.
+* Missing form labels for the search bar (mobile & desktop) as well as the newsletter signup- The search bar and newsletter do have form labels but stylistically I chose not to display them as the box has a placeholder and icon.
+* Empty search button, The button is not empty but again, I chose not to display it for style purposes. This is a very niche website and visual queues are the most important. The site needs to be aesthetically pleasing.
+* Empty links - These are all in the navbar and are not neccessarily empty, they are bootstrap dropdown menus. 
+* Contrast error - Grey writing on white background which is aesthetically pleasing and matches the pallette of the entire site. 
+
 
 *Go back to the [top](#table-of-contents)*
 
@@ -63,7 +68,7 @@ The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) wa
 
 ## JS Validation
 
-[JSHint](https://jshint.com/) was used to validate the JavaScript/Jquery of the website. No issues were found.
+[JSHint](https://jshint.com/) was used to validate the JavaScript/Jquery of the website. No major issues were found.
 
 
 *Go back to the [top](#table-of-contents)*
