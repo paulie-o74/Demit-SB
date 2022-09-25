@@ -404,7 +404,7 @@ footer {
 @media (max-width: 991px) {
     /* pad the top a bit when navbar is collapsed on mobile */
     .header-container {
-        padding-top: 116px;
+        padding-top: 50px;
     }
 
     .bag-table {

@@ -19,9 +19,9 @@
 
 ## Google's Lighthouse Performance
 
-[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance of the website. There are a couple of issues due to Bootstrap, Stripe and general Heroku slowness.
+[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance of the website. There are a couple of issues due to Bootstrap, Stripe, Mailchimp and general Heroku slowness.
 
-![CSS validation](/media/readme_images/llighthouse.png)
+![Lighthouse score](/media/readme_images/llighthouse.png)
 
 *Go back to the [top](#table-of-contents)*
 
@@ -41,7 +41,10 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) wa
 
 ## HTML Validation
 
-The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website. For logged in pages, the page source was copied and pasted into the validator. All pages pass
+The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website. For logged in pages, the page source was copied and pasted into the validator. All pages pass except fr the follwing errors due to bootstrap navbar: 
+* Error: Element li not allowed as child of element nav in this context. (Suppressing further errors from this subtree.) These li tags were taken from bootstrap, and similarly to the Boutique-Ado project they are in a mobile-header.html file which is included. 
+* Error: Duplicate ID user-options. The duplicate id tags are for dropdown menus in the nav and are taken from bootstrap.
+* Error: The value of the for attribute of the label element must be the ID of a non-hidden form control. I have decided to ignore this as stylistically I have opted to not include the search button as users will have to hit enter or go on mobile screen sizes and hit the enter button on the keyboard on large screen sizes. 
 
 *Go back to the [top](#table-of-contents)*
 
@@ -69,7 +72,7 @@ The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) wa
 
 ## PEP8 Validation
 
-A combination of the following Python packages was used to ensure the code is PEP8 compliant: flake8, autopep8 and black. After which `flake8 --statistics` was ran in VSCode terminal and the final flagged files were checked in [PEP8 Online](http://pep8online.com). The only issues found were a few longer lines in the base project's settings.py and migrations files due to HTML blocks.
+A combination of the following Python packages was used to ensure the code is PEP8 compliant: flake8, autopep8 and black. After which `flake8 --statistics` was ran in VSCode terminal and the final flagged files were checked in [PEP8 Online](http://pep8online.com). The only issues found were a few longer lines in the base project's settings.py, checkout apps.py, models.py and webhook_handler.py and migrations files due to HTML blocks.
 
 *Go back to the [top](#table-of-contents)*
 
