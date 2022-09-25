@@ -155,10 +155,10 @@
     {% endblock %} 
 
     {% block postloadjs %}
-        <script type="text/javascript">
+        <script>
             $('.toast').toast('show');
         </script>
-        <script type="text/javascript">
+        <script>
             /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
             var prevScrollpos = window.pageYOffset;
             window.onscroll = function() {
@@ -172,9 +172,9 @@
             }
         </script>
         <!-- Mailchimp javascript -->
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+        <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
         </script>
-        <script type='text/javascript'>
+        <script>
             (function ($) {
                 window.fnames = new Array();
                 window.ftypes = new Array();

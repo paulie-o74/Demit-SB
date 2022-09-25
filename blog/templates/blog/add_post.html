@@ -50,7 +50,7 @@
 {% block postloadjs %}
 {{ block.super }}
     <!-- JS to show a preview of the file name that you will be uploading  -->
-    <script type="text/javascript">
+    <script>
         $('#new-image').change(function () {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);
