@@ -3,9 +3,6 @@
 
 ![Am I responsive](/media/readme_images/amiresponsive.png)
 
-### **Live Site:**
-[Demit Art Site](https://demit-sb.herokuapp.com/)
-
 ### **Repository:**
 [Demit Art Repository](https://github.com/rashdogg74/Demit-SB)
 
